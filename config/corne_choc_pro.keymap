@@ -96,7 +96,7 @@
         ENTER_FUNCTIONS: ENTER_FUNCTIONS {
             compatible = "zmk,behavior-hold-tap";
             label = "ENTER_FUNCTIONS";
-            bindings = <&kp>, <&mo>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -146,7 +146,7 @@
   &kp Q  &kp W             &kp E               &kp R                       &kp T                 &kp C_MUTE  &kp C_PP  &kp Y                      &kp U                  &kp I               &kp O             &kp P
   &kp A  &HRM_LGUI LWIN S  &HRM_LCTRL LCTRL D  &HRM_LALT LEFT_ALT F        &kp G                 &kp LALT    &kp RALT  &kp H                      &HRM_RALT LEFT_ALT J   &HRM_RCTRL RCTRL K  &HRM_RGUI RWIN L  &kp SEMI
   &kp Z  &kp X             &kp C               &kp V                       &kp B                                       &kp N                      &kp M                  &kp COMMA           &kp DOT           &kp FSLH
-                           &kp LSHFT           &BCKSPC_NAVNUM 4 BACKSPACE  &TAB_FUNCTIONS 1 TAB                        &ENTER_FUNCTIONS RETURN 3  &SPACE_NAVNUM 4 SPACE  &kp RALT
+                           &kp LSHFT           &BCKSPC_NAVNUM 4 BACKSPACE  &TAB_FUNCTIONS 1 TAB                        &ENTER_FUNCTIONS 3 RETURN  &SPACE_NAVNUM 4 SPACE  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;

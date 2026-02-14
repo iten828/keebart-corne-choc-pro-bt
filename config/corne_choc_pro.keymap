@@ -84,12 +84,12 @@
         SPACE_NAVNUM: SPACE_NAVNUM {
             compatible = "zmk,behavior-hold-tap";
             label = "SPACE_NAVNUM";
-            bindings = <&mo>, <&mo>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <300>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 34 35 36>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 34 35 36 6 7 11 18 19 20 21 22 23 29 30 31 32 33 37 38 39 8 9 10 11>;
         };
 
         ENTER_FUNCIONS: ENTER_FUNCIONS {
@@ -114,15 +114,15 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39>;
         };
 
-        DELETE_NAVNUM: DELETE_NAVNUM {
+        BCKSPC_NAVNUM: BCKSPC_NAVNUM {
             compatible = "zmk,behavior-hold-tap";
-            label = "DELETE_NAVNUM";
+            label = "BCKSPC_NAVNUM";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <300>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 34 35 36>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 34 35 36 6 7 8 10 11 18 19 20 21 22 23 29 30 31 32 33 37 38 39 9>;
         };
     };
 
@@ -139,10 +139,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-  &kp Q  &kp W             &kp E               &kp R                    &kp T                 &kp C_MUTE  &kp C_PP  &kp Y                    &kp U                 &kp I               &kp O             &kp P
-  &kp A  &HRM_LGUI LWIN S  &HRM_LCTRL LCTRL D  &HRM_LALT LEFT_ALT F     &kp G                 &kp LALT    &kp RALT  &kp H                    &HRM_RALT LEFT_ALT J  &HRM_RCTRL RCTRL K  &HRM_RGUI RWIN L  &kp SEMI
-  &kp Z  &kp X             &kp C               &kp V                    &kp B                                       &kp N                    &kp M                 &kp COMMA           &kp DOT           &kp FSLH
-                           &kp LSHFT           &DELETE_NAVNUM 4 DELETE  &TAB_FUNCTIONS 1 TAB                        &ENTER_FUNCIONS ENTER 3  &SPACE_NAVNUM 4 4     &kp RALT
+  &kp Q  &kp W             &kp E               &kp R                       &kp T                 &kp C_MUTE  &kp C_PP  &kp Y                    &kp U                  &kp I               &kp O             &kp P
+  &kp A  &HRM_LGUI LWIN S  &HRM_LCTRL LCTRL D  &HRM_LALT LEFT_ALT F        &kp G                 &kp LALT    &kp RALT  &kp H                    &HRM_RALT LEFT_ALT J   &HRM_RCTRL RCTRL K  &HRM_RGUI RWIN L  &kp SEMI
+  &kp Z  &kp X             &kp C               &kp V                       &kp B                                       &kp N                    &kp M                  &kp COMMA           &kp DOT           &kp FSLH
+                           &kp LSHFT           &BCKSPC_NAVNUM 4 BACKSPACE  &TAB_FUNCTIONS 1 TAB                        &ENTER_FUNCIONS ENTER 3  &SPACE_NAVNUM 4 SPACE  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;

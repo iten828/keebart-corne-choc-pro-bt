@@ -80,13 +80,13 @@
             >;
         };
 
-        extra_layer_2 {
-            display-name = "EXTRA 2";
+        NumNav {
+            display-name = "NumNav";
             bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans                  &trans  &trans  &trans
+  &kp ESCAPE  &kp HOME   &kp UP_ARROW  &kp END      &kp PAGE_UP    &trans  &trans  &kp SLASH  &kp N7        &kp N8        &kp NUMBER_9  &trans
+  &trans      &kp LEFT   &kp DOWN      &kp RIGHT    &kp PAGE_DOWN  &trans  &trans  &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0
+  &kp K_UNDO  &kp K_CUT  &kp K_COPY    &kp K_PASTE  &kp K_REDO                     &kp COMMA  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT
+                         &trans        &trans       &trans                         &trans     &trans        &trans
             >;
         };
 

@@ -192,7 +192,7 @@
   &kp ESCAPE  &kp HOME   &kp UP_ARROW  &kp END      &kp PAGE_UP    &trans  &trans  &kp KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
   &trans      &kp LEFT   &kp DOWN      &kp RIGHT    &kp PAGE_DOWN  &trans  &trans  &kp KP_SUBTRACT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0
   &kp K_UNDO  &kp K_CUT  &kp K_COPY    &kp K_PASTE  &kp K_REDO                     &kp KP_COMMA     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DOT
-                         &trans        &kp DELETE   &trans                         &trans           &trans        &trans
+                         &trans        &kp DELETE   &kp LS(TAB)                    &trans           &trans        &trans
             >;
         };
     };

@@ -169,7 +169,7 @@
   &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &kp LCTRL  &kp RCTRL  &kp N6    &kp N7    &kp N8     &kp N9     &kp N0
   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LALT   &kp RALT   &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans
   &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                        &trans    &trans    &trans     &trans     &trans
-                                 &kp LGUI      &trans        &kp SPACE                             &kp LGUI  &trans    &kp SPACE
+                                 &trans        &trans        &trans                                &trans    &trans    &kp SPACE
             >;
         };
 
@@ -241,6 +241,16 @@
         };
 
         Fn {
+            display-name = "Functions";
+            bindings = <
+  &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &trans  &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans            &trans
+  &kp F5  &kp F6   &kp F7   &kp F8   &rgb_ug RGB_EFF                 &trans  &trans  &trans  &kp K_VOLUME_DOWN     &kp K_VOLUME_UP       &kp K_MUTE        &trans
+  &kp F9  &kp F10  &kp F11  &kp F12  &rgb_ug RGB_COLOR_HSB(0,92,49)                  &trans  &kp K_PREVIOUS        &kp K_NEXT            &kp K_PLAY_PAUSE  &trans
+                   &mo 1    &trans   &trans                                          &trans  &trans                &trans
+            >;
+        };
+
+        layer_9 {
             display-name = "Functions";
             bindings = <
   &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &trans  &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans            &trans

@@ -152,7 +152,7 @@
   &kp Q  &kp W             &kp E               &kp R                       &kp T                 &kp C_MUTE  &kp C_PP  &kp Y                      &kp U                  &kp I               &kp O             &kp P
   &kp A  &HRM_LGUI LWIN S  &HRM_LCTRL LCTRL D  &HRM_LALT LEFT_ALT F        &kp G                 &kp LALT    &kp RALT  &kp H                      &HRM_RALT LEFT_ALT J   &HRM_RCTRL RCTRL K  &HRM_RGUI RWIN L  &kp SEMI
   &kp Z  &kp X             &kp C               &kp V                       &kp B                                       &kp N                      &kp M                  &kp COMMA           &kp DOT           &kp FSLH
-                           &kp LSHFT           &BCKSPC_NAVNUM 4 BACKSPACE  &TAB_FUNCTIONS 1 TAB                        &ENTER_FUNCTIONS 3 RETURN  &SPACE_NAVNUM 4 SPACE  &kp RALT
+                           &kp LSHFT           &BCKSPC_NAVNUM 4 BACKSPACE  &TAB_FUNCTIONS 1 TAB                        &ENTER_FUNCTIONS 9 RETURN  &SPACE_NAVNUM 4 SPACE  &kp RALT
             >;
         };
 
@@ -247,6 +247,16 @@
   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
                   &trans  &trans  &trans                  &trans  &trans  &trans
+            >;
+        };
+
+        Fn2 {
+            display-name = "Functions";
+            bindings = <
+  &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &trans  &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans            &trans
+  &kp F5  &kp F6   &kp F7   &kp F8   &rgb_ug RGB_EFF                 &trans  &trans  &trans  &kp K_VOLUME_DOWN     &kp K_VOLUME_UP       &kp K_MUTE        &trans
+  &kp F9  &kp F10  &kp F11  &kp F12  &rgb_ug RGB_COLOR_HSB(0,92,49)                  &trans  &kp K_PREVIOUS        &kp K_NEXT            &kp K_PLAY_PAUSE  &trans
+                   &trans   &trans   &trans                                          &trans  &trans                &trans
             >;
         };
     };

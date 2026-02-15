@@ -149,10 +149,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-  &kp Q  &kp W             &kp E               &kp R                       &kp T                 &kp C_MUTE  &kp C_PP  &kp Y                      &kp U                  &kp I               &kp O             &kp P
-  &kp A  &HRM_LGUI LWIN S  &HRM_LCTRL LCTRL D  &HRM_LALT LEFT_ALT F        &kp G                 &kp LALT    &kp RALT  &kp H                      &HRM_RALT LEFT_ALT J   &HRM_RCTRL RCTRL K  &HRM_RGUI RWIN L  &kp SEMI
-  &kp Z  &kp X             &kp C               &kp V                       &kp B                                       &kp N                      &kp M                  &kp COMMA           &kp DOT           &kp FSLH
-                           &kp LSHFT           &BCKSPC_NAVNUM 3 BACKSPACE  &TAB_FUNCTIONS 1 TAB                        &ENTER_FUNCTIONS 1 RETURN  &SPACE_NAVNUM 3 SPACE  &kp RALT
+  &kp Q  &kp W             &kp E               &kp R                        &kp T                 &kp C_MUTE  &kp C_PP  &kp Y                      &kp U                   &kp I               &kp O             &kp P
+  &kp A  &HRM_LGUI LWIN S  &HRM_LCTRL LCTRL D  &HRM_LALT LEFT_ALT F         &kp G                 &kp LALT    &kp RALT  &kp H                      &HRM_RALT LEFT_ALT J    &HRM_RCTRL RCTRL K  &HRM_RGUI RWIN L  &kp SEMI
+  &kp Z  &kp X             &kp C               &kp V                        &kp B                                       &kp N                      &kp M                   &kp COMMA           &kp DOT           &kp FSLH
+                           &kp LSHFT           &BCKSPC_NAVNUM 13 BACKSPACE  &TAB_FUNCTIONS 1 TAB                        &ENTER_FUNCTIONS 1 RETURN  &SPACE_NAVNUM 13 SPACE  &kp RALT
             >;
         };
 
@@ -282,6 +282,18 @@
   &kp Z  &kp X             &kp MINUS           &kp V                       &kp B                                       &kp PERIOD                 &kp H                  &kp G               &kp COMMA         &kp FSLH
                            &kp LSHFT           &BCKSPC_NAVNUM 3 BACKSPACE  &TAB_FUNCTIONS 1 TAB                        &ENTER_FUNCTIONS 1 RETURN  &SPACE_NAVNUM 3 SPACE  &kp RALT
             >;
+        };
+
+        NumNav2 {
+            display-name = "NumNav";
+            bindings = <
+  &kp ESCAPE  &kp HOME   &kp UP_ARROW  &kp END      &kp PAGE_UP    &trans  &trans  &kp KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
+  &trans      &kp LEFT   &kp DOWN      &kp RIGHT    &kp PAGE_DOWN  &trans  &trans  &kp KP_SUBTRACT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0
+  &kp K_UNDO  &kp K_CUT  &kp K_COPY    &kp K_PASTE  &kp K_REDO                     &kp KP_COMMA     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DOT
+                         &trans        &kp DELETE   &kp LS(TAB)                    &trans           &trans        &trans
+            >;
+
+            label = "NumNav2";
         };
     };
 };

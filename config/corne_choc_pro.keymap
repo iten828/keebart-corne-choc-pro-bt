@@ -152,12 +152,12 @@
   &kp Q  &kp W             &kp E               &kp R                       &kp T                 &kp C_MUTE  &kp C_PP  &kp Y                      &kp U                  &kp I               &kp O             &kp P
   &kp A  &HRM_LGUI LWIN S  &HRM_LCTRL LCTRL D  &HRM_LALT LEFT_ALT F        &kp G                 &kp LALT    &kp RALT  &kp H                      &HRM_RALT LEFT_ALT J   &HRM_RCTRL RCTRL K  &HRM_RGUI RWIN L  &kp SEMI
   &kp Z  &kp X             &kp C               &kp V                       &kp B                                       &kp N                      &kp M                  &kp COMMA           &kp DOT           &kp FSLH
-                           &kp LSHFT           &BCKSPC_NAVNUM 3 BACKSPACE  &TAB_FUNCTIONS 9 TAB                        &ENTER_FUNCTIONS 9 RETURN  &SPACE_NAVNUM 3 SPACE  &kp RALT
+                           &kp LSHFT           &BCKSPC_NAVNUM 7 BACKSPACE  &TAB_FUNCTIONS 5 TAB                        &ENTER_FUNCTIONS 5 RETURN  &SPACE_NAVNUM 7 SPACE  &kp RALT
             >;
         };
 
-        lower_layer {
-            display-name = "NUMBER";
+        Bt {
+            display-name = "Bt";
 
             // --------------------------------------------------------------------------------
             // |  1  |  2  |  3  |  4  |  5    |  LCTRL | RCTRL |  6  |  7  |  8  |  9  |  0  |
@@ -200,73 +200,43 @@
             >;
         };
 
-        extra_layer_3 {
-            display-name = "EXTRA 3";
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        extra_layer_4 {
-            display-name = "EXTRA 4";
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        extra_layer_5 {
-            display-name = "EXTRA 5";
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        extra_layer_6 {
-            display-name = "EXTRA 6";
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
         Fn {
             display-name = "Functions";
             bindings = <
   &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &trans  &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans            &trans
   &kp F5  &kp F6   &kp F7   &kp F8   &rgb_ug RGB_EFF                 &trans  &trans  &trans  &kp K_VOLUME_DOWN     &kp K_VOLUME_UP       &kp K_MUTE        &trans
   &kp F9  &kp F10  &kp F11  &kp F12  &rgb_ug RGB_COLOR_HSB(0,92,49)                  &trans  &kp K_PREVIOUS        &kp K_NEXT            &kp K_PLAY_PAUSE  &trans
-                   &mo 10   &trans   &trans                                          &trans  &trans                &trans
+                   &mo 6    &trans   &trans                                          &trans  &trans                &trans
             >;
         };
 
-        layer_9 {
+        Fn2 {
             display-name = "Functions";
             bindings = <
   &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &trans  &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans            &trans
   &kp F5  &kp F6   &kp F7   &kp F8   &rgb_ug RGB_EFF                 &trans  &trans  &trans  &kp K_VOLUME_DOWN     &kp K_VOLUME_UP       &kp K_MUTE        &trans
   &kp F9  &kp F10  &kp F11  &kp F12  &rgb_ug RGB_COLOR_HSB(0,92,49)                  &trans  &kp K_PREVIOUS        &kp K_NEXT            &kp K_PLAY_PAUSE  &trans
-                   &mo 10   &trans   &trans                                          &trans  &trans                &trans
+                   &mo 6    &trans   &trans                                          &trans  &trans                &trans
             >;
         };
 
-        layer_10 {
-            display-name = "NUMBER";
+        Bt2 {
+            display-name = "BT2";
             bindings = <
   &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &kp LCTRL  &kp RCTRL  &kp N6    &kp N7    &kp N8     &kp N9     &kp N0
   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LALT   &kp RALT   &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans
   &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                        &trans    &trans    &trans     &trans     &trans
                                  &trans        &trans        &trans                                &trans    &trans    &kp SPACE
+            >;
+        };
+
+        NumNav2 {
+            display-name = "NumNav2";
+            bindings = <
+  &kp ESCAPE  &kp HOME   &kp UP_ARROW  &kp END      &kp PAGE_UP    &trans  &trans  &kp KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
+  &trans      &kp LEFT   &kp DOWN      &kp RIGHT    &kp PAGE_DOWN  &trans  &trans  &kp KP_SUBTRACT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0
+  &kp K_UNDO  &kp K_CUT  &kp K_COPY    &kp K_PASTE  &kp K_REDO                     &kp KP_COMMA     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DOT
+                         &trans        &kp DELETE   &trans                         &trans           &trans        &trans
             >;
         };
     };

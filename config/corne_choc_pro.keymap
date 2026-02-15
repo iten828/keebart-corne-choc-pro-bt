@@ -259,7 +259,7 @@
         };
 
         Ergo-l {
-            display-name = "QWERTY";
+            display-name = "Ergo-l";
             bindings = <
   &kp Q  &kp C             &kp O               &kp P                       &kp W                 &kp C_MUTE  &kp C_PP  &kp J                      &kp M                  &kp D               &kp O             &kp P
   &kp A  &HRM_LGUI LWIN S  &HRM_LCTRL LCTRL E  &HRM_LALT LEFT_ALT N        &kp F                 &kp LALT    &kp RALT  &kp L                      &HRM_RALT LEFT_ALT R   &HRM_RCTRL RCTRL T  &HRM_RGUI RWIN I  &kp U

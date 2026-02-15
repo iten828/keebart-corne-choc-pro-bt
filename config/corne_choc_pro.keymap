@@ -193,6 +193,8 @@
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
                   &trans  &trans  &trans                  &trans  &trans  &trans
             >;
+
+            label = "Ergo-l-1DK";
         };
 
         Ergo-l-S1DK {
@@ -202,6 +204,8 @@
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
                   &trans  &trans  &trans                  &trans  &trans  &trans
             >;
+
+            label = "Ergo-l-S1DK";
         };
 
         Ergo-l-Symbols {
@@ -211,6 +215,8 @@
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
                   &trans  &trans  &trans                  &trans  &trans  &trans
             >;
+
+            label = "Ergo-l-Symbols";
         };
 
         Ergo-l-SSymbols {
@@ -220,6 +226,8 @@
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
                   &trans  &trans  &trans                  &trans  &trans  &trans
             >;
+
+            label = "Ergo-l-SSymbols";
         };
 
         Ergo-l-SHF {
@@ -229,6 +237,8 @@
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
                   &trans  &trans  &trans                  &trans  &trans  &trans
             >;
+
+            label = "Ergo-l-SHF";
         };
 
         Ergo-l-SHF2 {
@@ -238,6 +248,8 @@
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
                   &trans  &trans  &trans                  &trans  &trans  &trans
             >;
+
+            label = "Ergo-l-SHF2";
         };
 
         Ergo-l-NumNav {
@@ -247,6 +259,8 @@
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
                   &trans  &trans  &trans                  &trans  &trans  &trans
             >;
+
+            label = "Ergo-l-NumNav";
         };
 
         Ergo-l-SHF-NumNav {
@@ -256,6 +270,8 @@
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
                   &trans  &trans  &trans                  &trans  &trans  &trans
             >;
+
+            label = "Ergo-l-SHF-NumNav";
         };
 
         Ergo-l {

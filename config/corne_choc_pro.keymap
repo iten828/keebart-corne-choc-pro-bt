@@ -134,6 +134,18 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39>;
             quick-tap-ms = <200>;
         };
+
+        EnterFunctions: EnterFunctions {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ENTERFUNCTIONS";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <300>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39>;
+            quick-tap-ms = <200>;
+        };
     };
 
     keymap {
@@ -290,10 +302,10 @@
             label = "Ergo-l";
             display-name = "Ergo-l";
             bindings = <
-  &kp Q  &kp C             &kp O               &kp P                        &kp W                 &kp C_MUTE  &kp C_PP  &kp J                      &kp M                   &kp D               &kp O             &kp Y
-  &kp A  &HRM_LGUI LWIN S  &HRM_LCTRL LCTRL E  &HRM_LALT LEFT_ALT N         &kp F                 &kp LALT    &kp RALT  &kp L                      &HRM_RALT LEFT_ALT R    &HRM_RCTRL RCTRL T  &HRM_RGUI RWIN I  &kp U
-  &kp Z  &kp X             &kp MINUS           &kp V                        &kp B                                       &kp PERIOD                 &kp H                   &kp G               &kp COMMA         &kp K
-                           &kp LSHFT           &BCKSPC_NAVNUM 12 BACKSPACE  &TAB_FUNCTIONS 1 TAB                        &ENTER_FUNCTIONS 1 RETURN  &SPACE_NAVNUM 12 SPACE  &kp RALT
+  &kp Q  &kp C             &kp O               &kp P                        &kp W                 &kp C_MUTE  &kp C_PP  &kp J                     &kp M                   &kp D               &kp O             &kp Y
+  &kp A  &HRM_LGUI LWIN S  &HRM_LCTRL LCTRL E  &HRM_LALT LEFT_ALT N         &kp F                 &kp LALT    &kp RALT  &kp L                     &HRM_RALT LEFT_ALT R    &HRM_RCTRL RCTRL T  &HRM_RGUI RWIN I  &kp U
+  &kp Z  &kp X             &kp MINUS           &kp V                        &kp B                                       &kp PERIOD                &kp H                   &kp G               &kp COMMA         &kp K
+                           &kp LSHFT           &BCKSPC_NAVNUM 12 BACKSPACE  &TAB_FUNCTIONS 1 TAB                        &EnterFunctions 1 RETURN  &SPACE_NAVNUM 12 SPACE  &kp RALT
             >;
         };
     };

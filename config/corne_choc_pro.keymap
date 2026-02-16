@@ -487,10 +487,9 @@
     keymap {
         compatible = "zmk,keymap";
 
-    // 0. Default qwerty layer -- 
-    //                         -- 
-    //  
-
+    // 0. Base layer -- keep the QWERTY key codes to use your OS keyboard layout
+    //               -- the Space Cadet layer-tap on the right can be replaced by an AltGr/Enter mod-tap
+    //               -- adjust the homerow mods with the #define statements above
         default_layer {
             display-name = "QWERTY";
 
@@ -537,16 +536,16 @@
     // 3. NumLock layer -- NavNum layer that stays on until deactivated without holding key
     //                  -- 
     //                  -- 
-    num_lock_layer {
-      label = "NumLock";
-      display-name = "NumLock";
-      bindings = <
-        &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans  &trans  &to BASE_LAYER S_N7  S_N8  S_N9  S_FSLH
-        S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans  &trans  S_MINUS        S_N4  S_N5  S_N6  S_N0
-        S_MONEY  S_COLON  S_STAR   S_PLUS    S_PRCNT                    S_COMMA        S_N1  S_N2  S_N3  S_DOT
-        &trans  &sc NUM_NAV_LAYER BACKSPACE  &kp (TAB)  &trans  &lt NUM_NAV_LAYER LS(SPACE)  &EZ_SL(SYMBOLS_LAYER)
-      >;
-    };
+        num_lock_layer {
+            label = "NumLock";
+            display-name = "NumLock";
+            bindings = <
+  &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans  &trans  &to BASE_LAYER S_N7  S_N8  S_N9  S_FSLH
+  S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans  &trans  S_MINUS        S_N4  S_N5  S_N6  S_N0
+  S_MONEY  S_COLON  S_STAR   S_PLUS    S_PRCNT                    S_COMMA        S_N1  S_N2  S_N3  S_DOT
+  &trans  &sc NUM_NAV_LAYER BACKSPACE  &kp (TAB)  &trans  &lt NUM_NAV_LAYER LS(SPACE)  &EZ_SL(SYMBOLS_LAYER)
+            >;
+        };
       
     // 4. Symbols layer -- with Ergol, basically just an AltGr layer with custom thumb keys
     //                  -- can be redefined for non-AltGr layouts such as QWERTY-ANSI

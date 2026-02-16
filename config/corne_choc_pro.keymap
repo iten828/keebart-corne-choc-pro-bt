@@ -121,6 +121,7 @@
             tapping-term-ms = <300>;
             hold-trigger-key-positions = <36>;
             quick-tap-ms = <200>;
+            hold-trigger-on-release;
         };
 
         BCKSPC_NAVNUM: BCKSPC_NAVNUM {

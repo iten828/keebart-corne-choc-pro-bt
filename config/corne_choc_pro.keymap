@@ -599,7 +599,7 @@
     //                  -- 
     //                  -- 
         num_lock_layer {
-            label = "NumLock";
+            display-name = "NumLock";
             bindings = <
   &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans  &trans  &to BASE_LAYER S_N7  S_N8  S_N9  S_FSLH
   S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans  &trans  S_MINUS        S_N4  S_N5  S_N6  S_N0

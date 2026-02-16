@@ -8,7 +8,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
-#include "keymap_french.h"
+#include "hold_taps.dtsi"  // defines thumb keys and homerow mods
+#include "keymap_french.h" // defines keys for ergo-l over windows azerty
 
 #define ERGOL           1
 #define WIN_SFT         1
@@ -485,9 +486,9 @@
 
             bindings = <
   &kp Q  &kp W             &kp E               &kp R                        &kp T                  &kp C_MUTE  &kp C_PP  &kp Y                       &kp U                   &kp I               &kp O             &kp P
-  &kp A  &HRM_LGUI LWIN S  &HRM_LCTRL LCTRL D  &HRM_LALT LEFT_ALT F         &kp G                  &kp LALT    &kp RALT  &kp H                       &HRM_RALT LEFT_ALT J    &HRM_RCTRL RCTRL K  &HRM_RGUI RWIN L  &kp SEMI
+  &kp A  HRM_S  HRM_D  HRM_F         &kp G                  &kp LALT    &kp RALT  &kp H                       HRM_J  HRM_K     HRM_L   &kp SEMI
   &kp Z  &kp X             &kp C               &kp V                        &kp B                                        &kp N                       &kp M                   &kp COMMA           &kp DOT           &kp FSLH
-                           &kp LSHFT           &BCKSPC_NAVNUM 10 BACKSPACE  &TAB_FUNCTIONS 11 TAB                        &ENTER_FUNCTIONS 11 RETURN  &SPACE_NAVNUM 10 SPACE  &kp RALT
+                           LTHUMB_TUCK  LTHUMB_HOME  LTHUMB_REACH    RTHUMB_REACH  RTHUMB_HOME  RTHUMB_TUCK
             >;
         };
 

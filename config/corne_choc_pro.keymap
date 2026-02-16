@@ -13,6 +13,25 @@
 
 #include "keymap_french.h"
 
+#define ERGOL           1
+#define WIN_SFT         1
+#define WIN_1DK         2
+#define WIN_1DKS        3
+#define WIN_CODE        4
+#define WIN_NUM         5
+
+#define OSX_DFT         6
+#define OSX_SFT         7
+#define OSX_1DK         8
+#define OSX_1DKS        9
+#define OSX_CODE        10
+#define OSX_NUM         11
+
+#define ALL_FUNC        12
+#define ALL_SCROLL      13
+#define ALL_BLUETOOTH   14
+
+
 #define K0 KP_N0
 #define K1 KP_N1
 #define K2 KP_N2
@@ -407,16 +426,29 @@
             >;
         };
 
+
         Ergo-l {
             label = "Ergo-l";
             display-name = "Ergo-l";
             bindings = <
-  &kp Q  &kp C             &kp O               &kp P                       &kp W                 &kp C_MUTE  &kp C_PP  &kp J                      &kp M                  &kp D               &kp O             &kp Y
-  &kp A  &HRM_LGUI LWIN S  &HRM_LCTRL LCTRL E  &HRM_LALT LEFT_ALT N        &kp F                 &kp LALT    &kp RALT  &kp L                      &HRM_RALT LEFT_ALT R   &HRM_RCTRL RCTRL T  &HRM_RGUI RWIN I  &kp U
-  &kp Z  &kp X             &kp MINUS           &kp V                       &kp B                                       &kp PERIOD                 &kp H                  &kp G               &kp COMMA         &kp K
+  &kp FR_Q       &kp FR_C             &kp FR_O               &kp FR_P                       &kp FR_W                 &kp C_MUTE  &kp C_PP  &kp FR_J                      &kp FR_M                  &kp FR_D               &kp WIN_1DK             &kp FR_Y
+  &kp FR_A  &HRM_LGUI LWIN FR_S  &HRM_LCTRL LCTRL FR_E  &HRM_LALT LEFT_ALT FR_N        &kp FR_F                 &kp LALT    &kp RALT  &kp FR_L                      &HRM_RALT LEFT_ALT FR_R   &HRM_RCTRL RCTRL FR_T  &HRM_RGUI RWIN FR_I  &kp FR_U
+  &kp FR_Z  &kp FR_X             &kp FR_MINS           &kp FR_V                       &kp FR_B                                       &kp FR_DOT                 &kp FR_H                  &kp FR_G               &kp FR_COMM         &kp FR_K
                            &kp LSHFT           &BCKSPC_NAVNUM 9 BACKSPACE  &TAB_FUNCTIONS 2 TAB                        &ENTER_FUNCTIONS 2 RETURN  &SPACE_NAVNUM 9 SPACE  &kp RALT
             >;
         };
+
+        win_1dk_layer {
+            label = "1dk";
+            display-name = "1dk";
+            bindings = <
+  &circ FR_A   &kp FR_CCED &a01xx K5 K6  &circ FR_O    &kp FR_DEG &trans  &trans  &to ERGOL   &kp FR_MICR  &kp FR_UNDS &kp FR_DIAE &circ FR_U    &to ERGOL
+  &kp FR_AGRV  &kp FR_EACU &kp FR_EGRV   &circ FR_E    &tild FR_N  &trans  &trans  &a1xx K7 K4   &a1xx K7 K5  &circ FR_I  &diae FR_I  &kp FR_UGRV   &kp FR_SECT
+  &a1xx K4 K5 &to ERGOL  &a01xx K7 K3  &a01xx K5 K0 &a01xx K5 K1                  &a1xx K4 K5 &to ERGOL  &a01xx K7 K3  &a01xx K5 K0 &a01xx K5 K1
+                  &trans  &trans  &trans                  &trans  &trans  &trans
+            >;
+        };
+
 
         Functions {
             display-name = "Functions";

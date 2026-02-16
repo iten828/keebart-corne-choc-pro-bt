@@ -600,7 +600,6 @@
     //                  -- 
         num_lock_layer {
             label = "NumLock";
-            display-name = "NumLock";
             bindings = <
   &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans  &trans  &to BASE_LAYER S_N7  S_N8  S_N9  S_FSLH
   S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans  &trans  S_MINUS        S_N4  S_N5  S_N6  S_N0
@@ -640,9 +639,9 @@
     num_nav_layer {
       display-name = "NumNav";
       bindings = <
-        &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP &trans        &trans   &to NUM_LOCK_LAYER S_N7  S_N8  S_N9  S_FSLH
+        &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans        &trans  &to NUM_LOCK_LAYER S_N7  S_N8  S_N9  S_FSLH
         X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans        &trans  S_MINUS            S_N4  S_N5  S_N6  S_N0
-        X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO       S_COMMA            S_N1  S_N2  S_N3  S_DOT
+        X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                           S_COMMA            S_N1  S_N2  S_N3  S_DOT
                &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT)
       >;
     };

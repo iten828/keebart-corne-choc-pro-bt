@@ -26,6 +26,18 @@
 #define ALL_FUNC        12
 #define ALL_SCROLL      13
 #define ALL_BLUETOOTH   14
+
+#define BASE_LAYER      0
+#define ERGOL_LAYER     1
+#define ERGOL_1DK_LAYER 2
+#define NUM_LOCK_LAYER  3
+#define SYMBOLS_LAYER   4
+#define VIM_NAV_LAYER   5
+#define NUM_NAV_LAYER   6
+#define NUM_ROW_LAYER   7
+#define FUNCTION_LAYER  8
+
+
 #define K0 KP_N0
 #define K1 KP_N1
 #define K2 KP_N2
@@ -515,10 +527,10 @@
             label = "1dk";
             display-name = "1dk";
             bindings = <
-  &circ FR_A   &kp FR_CCED  &a01xx K5 K6  &circ FR_O    &kp FR_DEG    &trans      &trans  &to ERGOL     &kp FR_MICR   &kp FR_UNDS  &kp FR_DIAE  &circ FR_U
-  &to ERGOL    &kp FR_AGRV  &kp FR_EACU   &kp FR_EGRV   &circ FR_E    &tild FR_N  &trans  &trans        &a1xx K7 K4   &a1xx K7 K5  &circ FR_I   &diae FR_I
-  &kp FR_UGRV  &kp FR_SECT  &a1xx K4 K5   &to ERGOL     &a01xx K7 K3                      &a01xx K5 K0  &a01xx K5 K1  &a1xx K4 K5  &to ERGOL    &a01xx K7 K3
-                            &a01xx K5 K0  &a01xx K5 K1  &trans                            &trans        &trans        &trans
+  &circ FR_A       &kp FR_CCED  &a01xx K5 K6  &circ FR_O       &kp FR_DEG    &trans      &trans  &to ERGOL_LAYER   &kp FR_MICR   &kp FR_UNDS  &kp FR_DIAE      &circ FR_U
+  &to ERGOL_LAYER  &kp FR_AGRV  &kp FR_EACU   &kp FR_EGRV      &circ FR_E    &tild FR_N  &trans  &trans            &a1xx K7 K4   &a1xx K7 K5  &circ FR_I       &diae FR_I
+  &kp FR_UGRV      &kp FR_SECT  &a1xx K4 K5   &to ERGOL_LAYER  &a01xx K7 K3                      &a01xx K5 K0      &a01xx K5 K1  &a1xx K4 K5  &to ERGOL_LAYER  &a01xx K7 K3
+                                &a01xx K5 K0  &a01xx K5 K1     &trans                            &trans            &trans        &trans
             >;
         };
 
@@ -528,9 +540,9 @@
     num_lock_layer {
       display-name = "NumLock";
       bindings = <
-        &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans        &trans  &to BASE_LAYER S_N7  S_N8  S_N9  S_FSLH
-        S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN   &trans        &trans S_MINUS        S_N4  S_N5  S_N6  S_N0
-        S_MONEY  S_COLON  S_STAR   S_PLUS    S_PRCNT      S_COMMA        S_N1  S_N2  S_N3  S_DOT
+        &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans  &trans  &to BASE_LAYER S_N7  S_N8  S_N9  S_FSLH
+        S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans  &trans  S_MINUS        S_N4  S_N5  S_N6  S_N0
+        S_MONEY  S_COLON  S_STAR   S_PLUS    S_PRCNT                    S_COMMA        S_N1  S_N2  S_N3  S_DOT
         &trans  &sc NUM_NAV_LAYER BACKSPACE  &kp (TAB)  &trans  &lt NUM_NAV_LAYER LS(SPACE)  &EZ_SL(SYMBOLS_LAYER)
       >;
     };

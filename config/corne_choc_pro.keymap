@@ -475,6 +475,10 @@
     keymap {
         compatible = "zmk,keymap";
 
+    // 0. Default qwerty layer -- 
+    //                         -- 
+    //  
+
         default_layer {
             display-name = "QWERTY";
 
@@ -485,13 +489,15 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-  &kp Q  &kp W             &kp E               &kp R                        &kp T                  &kp C_MUTE  &kp C_PP  &kp Y                       &kp U                   &kp I               &kp O             &kp P
-  &kp A  HRM_S  HRM_D  HRM_F         &kp G                  &kp LALT    &kp RALT  &kp H                       HRM_J  HRM_K     HRM_L   &kp SEMI
-  &kp Z  &kp X             &kp C               &kp V                        &kp B                                        &kp N                       &kp M                   &kp COMMA           &kp DOT           &kp FSLH
-                           LTHUMB_TUCK  LTHUMB_HOME  LTHUMB_REACH    RTHUMB_REACH  RTHUMB_HOME  RTHUMB_TUCK
+  &kp Q  &kp W  &kp E  &kp R  &kp T          &kp C_MUTE  &kp C_PP  &kp Y  &kp U  &kp I      &kp O    &kp P
+  &kp A  HRM_S  HRM_D  HRM_F  &kp G          &kp LALT    &kp RALT  &kp H  HRM_J  HRM_K      HRM_L    &kp SEMI
+  &kp Z  &kp X  &kp C  &kp V  &kp B                                &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
+                LTHUMB_TUCK  LTHUMB_HOME  LTHUMB_REACH    RTHUMB_REACH  RTHUMB_HOME  RTHUMB_TUCK
             >;
         };
-
+    // 1. Ergol over Windows azerty layer --
+    //                                    -- 
+    //  
         Ergo-l {
             label = "Ergo-l";
             display-name = "Ergo-l";
@@ -499,10 +505,12 @@
   &kp FR_Q  &kp FR_C             &kp FR_O               &kp FR_P                     &kp FR_W               &kp C_MUTE  &kp C_PP  &kp FR_J                    &kp FR_M                 &kp FR_D               &sl WIN_1DK          &kp FR_Y
   &kp FR_A  &HRM_LGUI LWIN FR_S  &HRM_LCTRL LCTRL FR_E  &HRM_LALT LEFT_ALT FR_N      &kp FR_F               &kp LALT    &kp RALT  &kp FR_L                    &HRM_RALT LEFT_ALT FR_R  &HRM_RCTRL RCTRL FR_T  &HRM_RGUI RWIN FR_I  &kp FR_U
   &kp FR_Z  &kp FR_X             &kp FR_MINS            &kp FR_V                     &kp FR_B                                     &kp FR_DOT                  &kp FR_H                 &kp FR_G               &kp FR_COMM          &kp FR_K
-                                 &kp LSHFT              &BCKSPC_NAVNUM 10 BACKSPACE  &TAB_FUNCTIONS 11 TAB                        &ENTER_FUNCTIONS 11 RETURN  &SPACE_NAVNUM 10 SPACE   &kp RALT
+                                 LTHUMB_TUCK  LTHUMB_HOME  LTHUMB_REACH    RTHUMB_REACH  RTHUMB_HOME  RTHUMB_TUCK
             >;
         };
-
+    // 2. Ergol 1DK layer --
+    //                    -- 
+    //  
         win_1dk_layer {
             label = "1dk";
             display-name = "1dk";
@@ -514,28 +522,85 @@
             >;
         };
 
+    // 3. NumLock layer -- NavNum layer that stays on until deactivated without holding key
+    //                  -- 
+    //                  -- 
+    num_lock_layer: num_lock_layer {
+      display-name = "NumLock";
+      bindings = <
+        &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans        &trans  &to BASE_LAYER S_N7  S_N8  S_N9  S_FSLH
+        S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN   &trans        &trans S_MINUS        S_N4  S_N5  S_N6  S_N0
+        S_MONEY  S_COLON  S_STAR   S_PLUS    S_PRCNT      S_COMMA        S_N1  S_N2  S_N3  S_DOT
+        &trans  &sc NUM_NAV_LAYER BACKSPACE  &kp (TAB)  &trans  &lt NUM_NAV_LAYER LS(SPACE)  &EZ_SL(SYMBOLS_LAYER)
+      >;
+    };
+      
+    // 4. Symbols layer -- with Ergol, basically just an AltGr layer with custom thumb keys
+    //                  -- can be redefined for non-AltGr layouts such as QWERTY-ANSI
+    symbols_layer: symbols_layer {
+      display-name = "Symbols";
+      bindings = <
+        S_CARET S_LT    S_GT    S_DLLR  S_PRCNT   &trans        &trans     S_AT    S_AMPS  S_STAR  S_SQT   S_GRAVE
+        S_LBRC  S_LPAR  S_RPAR  S_RBRC  S_EQUAL    &trans        &trans   S_BSLH  S_PLUS  S_MINUS S_FSLH  S_DQT
+        S_TILDE S_LBKT  S_RBKT  S_UNDER S_HASH        S_PIPE  S_EXCL  S_SEMI  S_COLON S_QMARK
+                    SYM_NUM_LAYER  &kp SPACE  &kp ENTER     &trans  &kp RALT  &trans
+      >;
+    };
+
+    // 5. VimNav layer -- HJKL arrow cluster on the right hand
+    //                 -- best used along with the NumRow layer
+    //                 -- keyboard shortcuts on the left hand are adjusted to the OS layout (Ergol here)
+    vim_nav_layer: vim_nav_layer {
+      display-name = "VimNav";
+      bindings = <
+        &kp CAPS X_CLOSE  X_PREV   X_NEXT    &none  &trans        &trans      &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp DEL 
+        X_ALL    X_SAVE   X_SHTAB  &kp TAB   &none   &trans        &trans     &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
+        X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO       &none    &none     &none     &none     &none
+        &kp CAPSLOCK  &lt FUNCTION_LAYER DEL  &mo NUM_ROW_LAYER   &trans   &mo FUNCTION_LAYER  &EZ_LSK(RALT)
+      >;
+    };
+
+    // 6. NumNav layer -- inverted T arrow cluster on the left hand, numpad on the right hand
+    //                 -- can be the only extra layer you need if you're not too picky with number+symbols n-grams
+    //                 -- keyboard shortcuts on the left hand are adjusted to the OS layout (Ergol here)
+    num_nav_layer: num_nav_layer {
+      display-name = "NumNav";
+      bindings = <
+        &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP &trans        &trans   &to NUM_LOCK_LAYER S_N7  S_N8  S_N9  S_FSLH
+        X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans        &trans  S_MINUS            S_N4  S_N5  S_N6  S_N0
+        X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO       S_COMMA            S_N1  S_N2  S_N3  S_DOT
+               &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT)
+      >;
+    };
+
+    // 7. NumRow layer -- bring the numbers to the homerow, keep shift+numbers for shortcuts and symbols
+    //                 -- space becomes shift+space, which is a no-break space with some OS layouts (e.g. Ergol)
+    //                 -- best used along with the VimNav layer
+    num_row_layer: num_row_layer {
+      display-name = "NumRow";
+      bindings = <
+        &kp RS(N1) &kp RS(N2) &kp RS(N3) &kp RS(N4) &kp RS(N5)  &trans        &trans     &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0) 
+        &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &trans        &trans      &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+        &none      &none      &none      &none      &none            S_MINUS    S_COMMA    S_DOT      S_COLON    S_FSLH
+                                      &trans  &kp RS(SPACE) &trans           &trans  &kp LS(SPACE) &kp RALT
+      >;
+    };
+    // 8. Functions layer --
+    //                    -- 
+    //                    -- 
         Functions {
+            label = "Functions";
             display-name = "Functions";
             bindings = <
-  &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &trans  &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans            &to 1
+  &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &trans  &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans            &to ERGOL_LAYER
   &kp F5  &kp F6   &kp F7   &kp F8   &rgb_ug RGB_EFF                 &trans  &trans  &trans  &kp K_VOLUME_DOWN     &kp K_VOLUME_UP       &kp K_MUTE        &trans
-  &kp F9  &kp F10  &kp F11  &kp F12  &rgb_ug RGB_COLOR_HSB(0,92,49)                  &trans  &kp K_PREVIOUS        &kp K_NEXT            &kp K_PLAY_PAUSE  &to 0
+  &kp F9  &kp F10  &kp F11  &kp F12  &rgb_ug RGB_COLOR_HSB(0,92,49)                  &trans  &kp K_PREVIOUS        &kp K_NEXT            &kp K_PLAY_PAUSE  &to BASE_LAYER
                    &mo 5    &trans   &trans                                          &trans  &trans                &trans
             >;
-
-            label = "Functions";
         };
-
-        NumNav {
-            display-name = "NumNav";
-            bindings = <
-  &kp ESCAPE  &kp HOME   &kp UP_ARROW  &kp END      &kp PAGE_UP    &trans  &trans  &kp KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
-  &trans      &kp LEFT   &kp DOWN      &kp RIGHT    &kp PAGE_DOWN  &trans  &trans  &kp KP_SUBTRACT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0
-  &kp K_UNDO  &kp K_CUT  &kp K_COPY    &kp K_PASTE  &kp K_REDO                     &kp KP_COMMA     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DOT
-                         &trans        &kp DELETE   &kp LS(TAB)                    &trans           &trans        &trans
-            >;
-        };
-
+    // 9. BlueTooth layer -- 
+    //                    -- 
+    //                    -- 
         BT {
             display-name = "BT";
             bindings = <
@@ -548,61 +613,5 @@
             label = "BT";
         };
 
-        layer_5 {
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        layer_7 {
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        layer_8 {
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        NumNav2 {
-            display-name = "NumNav";
-            bindings = <
-  &kp ESCAPE  &kp HOME   &kp UP_ARROW  &kp END      &kp PAGE_UP    &trans  &trans  &kp KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
-  &trans      &kp LEFT   &kp DOWN      &kp RIGHT    &kp PAGE_DOWN  &trans  &trans  &kp KP_SUBTRACT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0
-  &kp K_UNDO  &kp K_CUT  &kp K_COPY    &kp K_PASTE  &kp K_REDO                     &kp KP_COMMA     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DOT
-                         &trans        &kp DELETE   &kp LS(TAB)                    &trans           &trans        &trans
-            >;
-        };
-
-        Functions2 {
-            label = "Functions2";
-            display-name = "Functions";
-            bindings = <
-  &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &trans  &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans            &to 1
-  &kp F5  &kp F6   &kp F7   &kp F8   &rgb_ug RGB_EFF                 &trans  &trans  &trans  &kp K_VOLUME_DOWN     &kp K_VOLUME_UP       &kp K_MUTE        &trans
-  &kp F9  &kp F10  &kp F11  &kp F12  &rgb_ug RGB_COLOR_HSB(0,92,49)                  &trans  &kp K_PREVIOUS        &kp K_NEXT            &kp K_PLAY_PAUSE  &to 0
-                   &mo 5    &trans   &trans                                          &trans  &trans                &trans
-            >;
-        };
     };
 };

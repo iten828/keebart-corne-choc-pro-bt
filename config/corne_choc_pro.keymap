@@ -194,7 +194,7 @@
         };
 
 /* BT */
-
+/*
         bt_prof0: bt_prof0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -218,7 +218,7 @@
                 <&macro_press &bt BT_SEL 2>
                 ,<&macro_press &to WIN_DFT>;
         };
-
+*/
 /* SEQUENCES */
         w1mins2: w1mins2 {
             compatible = "zmk,behavior-macro-two-param";

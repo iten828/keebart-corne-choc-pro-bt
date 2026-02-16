@@ -19,12 +19,6 @@
 #define K8 KP_N8
 #define K9 KP_N9 
 
-&sl {
-    release-after-ms = <2000>;
-};
-
-/ {
-
 / {
     chosen { zmk,physical-layout = &five_col_layout; };
 };

@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
+#include "aliases.h"      // defines symbols and actions
 #include "hold_taps.dtsi"  // defines thumb keys and homerow mods
 #include "keymap_french.h" // defines keys for ergo-l over windows azerty
 
@@ -36,7 +37,7 @@
 #define NUM_NAV_LAYER   6
 #define NUM_ROW_LAYER   7
 #define FUNCTION_LAYER  8
-
+#define BT              9
 
 #define K0 KP_N0
 #define K1 KP_N1
@@ -607,7 +608,7 @@
   &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &trans  &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans            &to ERGOL_LAYER
   &kp F5  &kp F6   &kp F7   &kp F8   &rgb_ug RGB_EFF                 &trans  &trans  &trans  &kp K_VOLUME_DOWN     &kp K_VOLUME_UP       &kp K_MUTE        &trans
   &kp F9  &kp F10  &kp F11  &kp F12  &rgb_ug RGB_COLOR_HSB(0,92,49)                  &trans  &kp K_PREVIOUS        &kp K_NEXT            &kp K_PLAY_PAUSE  &to BASE_LAYER
-                   &mo 5    &trans   &trans                                          &trans  &trans                &trans
+                   &mo BT   &trans   &trans                                          &trans  &trans                &trans
             >;
         };
     // 9. BlueTooth layer -- 

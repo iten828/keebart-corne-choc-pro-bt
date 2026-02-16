@@ -167,7 +167,7 @@
   &kp Q  &kp C             &kp O               &kp P                       &kp W                 &kp C_MUTE  &kp C_PP  &kp J                      &kp M                  &kp D               &kp O             &kp Y
   &kp A  &HRM_LGUI LWIN S  &HRM_LCTRL LCTRL E  &HRM_LALT LEFT_ALT N        &kp F                 &kp LALT    &kp RALT  &kp L                      &HRM_RALT LEFT_ALT R   &HRM_RCTRL RCTRL T  &HRM_RGUI RWIN I  &kp U
   &kp Z  &kp X             &kp MINUS           &kp V                       &kp B                                       &kp PERIOD                 &kp H                  &kp G               &kp COMMA         &kp K
-                           &kp LSHFT           &BCKSPC_NAVNUM 3 BACKSPACE  &TAB_FUNCTIONS 2 TAB                        &ENTER_FUNCTIONS 2 RETURN  &SPACE_NAVNUM 3 SPACE  &kp RALT
+                           &kp LSHFT           &BCKSPC_NAVNUM 9 BACKSPACE  &TAB_FUNCTIONS 2 TAB                        &ENTER_FUNCTIONS 2 RETURN  &SPACE_NAVNUM 9 SPACE  &kp RALT
             >;
         };
 
@@ -241,7 +241,7 @@
             >;
         };
 
-        layer_9 {
+        NumNav2 {
             display-name = "NumNav";
             bindings = <
   &kp ESCAPE  &kp HOME   &kp UP_ARROW  &kp END      &kp PAGE_UP    &trans  &trans  &kp KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans

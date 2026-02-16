@@ -10,12 +10,12 @@
 // Human-readable constants for the layer indexes.
 // Make sure to update this table if you edit the order / number of layers in the keymap.
 #define BASE_LAYER     0
-#define NUM_LOCK_LAYER 1
-#define SYMBOLS_LAYER  2
-#define VIM_NAV_LAYER  3
-#define NUM_NAV_LAYER  4
-#define NUM_ROW_LAYER  5
-#define FUNCTION_LAYER 6
+#define NUM_LOCK_LAYER 6
+#define SYMBOLS_LAYER  7
+#define VIM_NAV_LAYER  8
+#define NUM_NAV_LAYER  10
+#define NUM_ROW_LAYER  9
+#define FUNCTION_LAYER 11
 
 // Potentially used by other keymaps deriving from this one, who may add extra layers.
 // Make sure this stays equal to <index_of_last_layer> + 1

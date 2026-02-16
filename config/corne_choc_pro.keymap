@@ -25,6 +25,12 @@
 
 / {
 
+/ {
+    chosen { zmk,physical-layout = &five_col_layout; };
+};
+
+/ {
+
     macros {
         lm: lm {
             compatible = "zmk,behavior-macro-two-param";
@@ -251,11 +257,11 @@
 
         
     };
-/ {
-    chosen { zmk,physical-layout = &five_col_layout; };
-};
 
-/ {
+
+
+
+
     behaviors {
         HRM_RGUI: HRM_RGUI {
             compatible = "zmk,behavior-hold-tap";

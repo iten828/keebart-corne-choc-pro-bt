@@ -283,7 +283,7 @@
   &kp Q  &kp C             &kp O               &kp P                        &kp W  &kp C_MUTE  &kp C_PP  &kp J                      &kp M                   &kp D               &kp O             &kp Y
   &kp A  &HRM_LGUI LWIN S  &HRM_LCTRL LCTRL E  &HRM_LALT LEFT_ALT N         &kp F  &kp LALT    &kp RALT  &kp L                      &HRM_RALT LEFT_ALT R    &HRM_RCTRL RCTRL T  &HRM_RGUI RWIN I  &kp U
   &kp Z  &kp X             &kp MINUS           &kp V                        &kp B                        &kp PERIOD                 &kp H                   &kp G               &kp COMMA         &kp K
-                           &kp LSHFT           &BCKSPC_NAVNUM 11 BACKSPACE  &mo 1                        &ENTER_FUNCTIONS 1 RETURN  &SPACE_NAVNUM 11 SPACE  &kp RALT
+                           &kp LSHFT           &BCKSPC_NAVNUM 11 BACKSPACE  &kp Z                        &ENTER_FUNCTIONS 1 RETURN  &SPACE_NAVNUM 11 SPACE  &kp RALT
             >;
         };
     };

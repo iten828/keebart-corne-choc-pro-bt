@@ -405,8 +405,9 @@
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
-            hold-trigger-key-positions = <14>;
+            hold-trigger-key-positions = <6 7 8 11 18 19 20 21 22 23 29 30 31 32 33 37 38 39 9 10>;
             quick-tap-ms = <200>;
+            hold-trigger-on-release;
         };
 
         HRM_LALT: HRM_LALT {
@@ -494,9 +495,9 @@
             label = "Ergo-l";
             display-name = "Ergo-l";
             bindings = <
-  &kp FR_Q  &kp FR_C             &kp FR_O               &kp FR_P                     &kp FR_W              &kp C_MUTE  &kp C_PP  &kp FR_J                   &kp FR_M                 &kp FR_D               &sl WIN_1DK          &kp FR_Y
-  &kp FR_A  &HRM_LGUI LWIN FR_S  &HRM_LCTRL LCTRL FR_E  &HRM_LALT LEFT_ALT FR_N      &kp FR_F              &kp LALT    &kp RALT  &kp FR_L                   &HRM_RALT LEFT_ALT FR_R  &HRM_RCTRL RCTRL FR_T  &HRM_RGUI RWIN FR_I  &kp FR_U
-  &kp FR_Z  &kp FR_X             &kp FR_MINS            &kp FR_V                     &kp FR_B                                    &kp FR_DOT                 &kp FR_H                 &kp FR_G               &kp FR_COMM          &kp FR_K
+  &kp FR_Q  &kp FR_C             &kp FR_O               &kp FR_P                     &kp FR_W               &kp C_MUTE  &kp C_PP  &kp FR_J                    &kp FR_M                 &kp FR_D               &sl WIN_1DK          &kp FR_Y
+  &kp FR_A  &HRM_LGUI LWIN FR_S  &HRM_LCTRL LCTRL FR_E  &HRM_LALT LEFT_ALT FR_N      &kp FR_F               &kp LALT    &kp RALT  &kp FR_L                    &HRM_RALT LEFT_ALT FR_R  &HRM_RCTRL RCTRL FR_T  &HRM_RGUI RWIN FR_I  &kp FR_U
+  &kp FR_Z  &kp FR_X             &kp FR_MINS            &kp FR_V                     &kp FR_B                                     &kp FR_DOT                  &kp FR_H                 &kp FR_G               &kp FR_COMM          &kp FR_K
                                  &kp LSHFT              &BCKSPC_NAVNUM 10 BACKSPACE  &TAB_FUNCTIONS 11 TAB                        &ENTER_FUNCTIONS 11 RETURN  &SPACE_NAVNUM 10 SPACE   &kp RALT
             >;
         };

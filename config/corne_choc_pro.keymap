@@ -682,10 +682,10 @@
             label = "sym";
             display-name = "sym";
             bindings = <
-  &kp FR_DQUO  &kp FR_LABK  &kp FR_RABK  &kp FR_AMPR   &kp FR_PERC    &trans      &trans  &none       &kp FR_DLR &kp FR_UNDS &none      &none
-  &kp FR_LCBR  &kp FR_LPRN  &kp FR_RPRN  &kp FR_RCBR   &kp FR_PIPE  &trans  &trans            &&kp HOME    &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT
-  &kp FR_QUOT  &kp FR_LBRC  &kp FR_RBRC  &kp FR_UNDS   &kp FR_HASH                     &none       &none      &kp PG_DN   &kp PG_UP  &none
-                                &trans           &trans     &trans                           &trans            &trans        &trans
+  &kp FR_DQUO  &kp FR_LABK  &kp FR_RABK  &kp FR_AMPR   &kp FR_PERC  &trans  &trans  &none     &kp FR_DLR  &kp FR_UNDS  &none      &none
+  &kp FR_LCBR  &kp FR_LPRN  &kp FR_RPRN  &kp FR_RCBR   &kp FR_PIPE  &trans  &trans  &kp HOME  &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT
+  &kp FR_QUOT  &kp FR_LBRC  &kp FR_RBRC  &kp FR_UNDS   &kp FR_HASH                  &none     &none       &kp PG_DN    &kp PG_UP  &none
+                                         &trans        &trans       &trans  &trans  &trans    &trans
             >;
         };
 

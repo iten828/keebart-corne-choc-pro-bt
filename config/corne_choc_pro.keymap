@@ -710,10 +710,10 @@
             label = "ergol-NumNav";
             display-name = "NumNav";
             bindings = <
-  &circ FR_A       &kp FR_CCED  &a01xx K5 K6  &circ FR_O       &kp FR_DEG    &trans      &trans  &to ERGOL_LAYER   &kp FR_MICR   &kp FR_UNDS  &kp FR_DIAE      &circ FR_U
-  &to ERGOL_LAYER  &kp FR_AGRV  &kp FR_EACU   &kp FR_EGRV      &circ FR_E    &tild FR_N  &trans  &trans            &a1xx K7 K4   &a1xx K7 K5  &circ FR_I       &diae FR_I
-  &kp FR_UGRV      &kp FR_SECT  &a1xx K4 K5   &to ERGOL_LAYER  &a01xx K7 K3                      &a01xx K5 K0      &a01xx K5 K1  &a1xx K4 K5  &to ERGOL_LAYER  &a01xx K7 K3
-                                &a01xx K5 K0  &a01xx K5 K1     &trans                            &trans            &trans        &trans
+        &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans        &trans  &to NUM_LOCK_LAYER S_N7  S_N8  S_N9  S_FSLH
+        X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans        &trans  S_MINUS            S_N4  S_N5  S_N6  S_N0
+        X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                           S_COMMA            S_N1  S_N2  S_N3  S_DOT
+            &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT)
             >;
         };
 

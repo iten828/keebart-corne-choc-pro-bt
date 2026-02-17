@@ -629,7 +629,7 @@
   &kp FR_Q  &kp FR_C             &kp FR_O               &kp FR_P                     &kp FR_W               &kp C_MUTE  &kp C_PP  &kp FR_J                    &kp FR_M                 &kp FR_D               &sl ERGOL_1DK_LAYER          &kp FR_Y
   &kp FR_A  &HRM_LGUI LWIN FR_S  &HRM_LCTRL LCTRL FR_E  &HRM_LALT LEFT_ALT FR_N      &kp FR_F               &kp LALT    &kp RALT  &kp FR_L                    &HRM_RALT LEFT_ALT FR_R  &HRM_RCTRL RCTRL FR_T  &HRM_RGUI RWIN FR_I  &kp FR_U
   &kp FR_Z  &kp FR_X             &kp FR_MINS            &kp FR_V                     &kp FR_B                                     &kp FR_DOT                  &kp FR_H                 &kp FR_G               &kp FR_COMM          &kp FR_K
-                                 &lm ERGOL_SLAYER LSHIFT  &BCKSPC_NAVNUM ERGOL_NUMNAV BACKSPACE LTHUMB_REACH    RTHUMB_REACH  RTHUMB_HOME  &mo ERGOL_SYM
+                                 &lm ERGOL_SLAYER LSHIFT  &BCKSPC_NAVNUM ERGOL_NUMNAV BACKSPACE LTHUMB_REACH    RTHUMB_REACH  &SPACE_NAVNUM ERGOL_NUMNAV SPACE &mo ERGOL_SYM
             >;
         };
 
@@ -710,9 +710,9 @@
             label = "ergol-NumNav";
             display-name = "NumNav";
             bindings = <
-        &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans        &trans  &to NUM_LOCK_LAYER S_N7  S_N8  S_N9  S_FSLH
-        X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans        &trans  S_MINUS            S_N4  S_N5  S_N6  S_N0
-        X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                           S_COMMA            S_N1  S_N2  S_N3  S_DOT
+        &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans        &trans  &to NUM_LOCK_LAYER &kp FR_7   &kp FR_8  &kp FR_9  FR_SLSH
+        X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans        &trans  FR_MINS            &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
+        X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                           FR_COMM            &kp FR_1   &kp FR_2  &kp FR_3  FR_DOT
             &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT)
             >;
         };

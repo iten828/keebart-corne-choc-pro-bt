@@ -668,9 +668,9 @@
             label = "s1dk";
             display-name = "s1dk";
             bindings = <
-  &a1xx K2 K8      &a01xx K4 K0     &circ LS(FR_O)   &to ERGOL_LAYER  &to ERGOL_LAYER  &trans           &trans  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &circ LS(FR_U)   &to ERGOL_LAYER
+  &a1xx K9 K4      &a01xx K2 K8     &circ LS(FR_O)   &to ERGOL_LAYER  &to ERGOL_LAYER  &trans           &trans  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &circ LS(FR_U)   &to ERGOL_LAYER
   &agrv LS(FR_A)   &a1xx K4 K4      &agrv LS(FR_E)   &circ LS(FR_E)   &tild LS(FR_N)   &trans           &trans  &to ERGOL_LAYER  &to ERGOL_LAYER  &circ LS(FR_I)   &diae LS(FR_I)   &agrv LS(FR_U) 
-  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER                           &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &a01xx K7 K4
+  &a1xx K9 K8  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER                           &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &a01xx K7 K4
                                                    &trans           &trans     &trans                           &trans            &trans        &trans
             >;
         };

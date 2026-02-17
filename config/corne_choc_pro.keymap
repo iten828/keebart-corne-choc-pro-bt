@@ -682,10 +682,10 @@
             label = "sym";
             display-name = "sym";
             bindings = <
-  &kp FR_DQUO  &kp FR_LABK  &kp FR_RABK  &kp FR_AMPR   &kp FR_PERC  &trans  &trans  &none     &kp FR_DLR  &kp FR_UNDS  &none      &none
-  &kp FR_LCBR  &kp FR_LPRN  &kp FR_RPRN  &kp FR_RCBR   &kp FR_PIPE  &trans  &trans  &kp HOME  &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT
-  &kp FR_QUOT  &kp FR_LBRC  &kp FR_RBRC  &kp FR_UNDS   &kp FR_HASH                  &none     &none       &kp PG_DN    &kp PG_UP  &none
-                                         &trans        &trans       &trans  &trans  &trans    &trans
+                                        &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
+                                     &trans &trans &trans               &trans &trans &trans
             >;
         };
 
@@ -696,10 +696,10 @@
             label = "ssym";
             display-name = "ssym";
             bindings = <
-  &circ FR_A       &kp FR_CCED  &a01xx K5 K6  &circ FR_O       &kp FR_DEG    &trans      &trans  &to ERGOL_LAYER   &kp FR_MICR   &kp FR_UNDS  &kp FR_DIAE      &circ FR_U
-  &to ERGOL_LAYER  &kp FR_AGRV  &kp FR_EACU   &kp FR_EGRV      &circ FR_E    &tild FR_N  &trans  &trans            &a1xx K7 K4   &a1xx K7 K5  &circ FR_I       &diae FR_I
-  &kp FR_UGRV      &kp FR_SECT  &a1xx K4 K5   &to ERGOL_LAYER  &a01xx K7 K3                      &a01xx K5 K0      &a01xx K5 K1  &a1xx K4 K5  &to ERGOL_LAYER  &a01xx K7 K3
-                                &a01xx K5 K0  &a01xx K5 K1     &trans                            &trans            &trans        &trans
+                                        &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
+                                     &trans &trans &trans               &trans &trans &trans
             >;
         };
 
@@ -724,11 +724,11 @@
             label = "snumnav";
             display-name = "sNumNav";
             bindings = <
-  &circ FR_A       &kp FR_CCED  &a01xx K4 K0  &circ FR_O       &ax K7        &trans      &trans  &to ERGOL_LAYER   &kp FR_MICR   &kp FR_UNDS  &kp FR_DIAE      &circ FR_U
-  &to ERGOL_LAYER  &kp FR_AGRV  &kp FR_EACU   &kp FR_EGRV      &circ FR_E    &tild FR_N  &trans  &trans            &a1xx K7 K4   &a1xx K7 K5  &circ FR_I       &diae FR_I
-  &kp FR_UGRV      &kp FR_SECT  &a1xx K4 K5   &to ERGOL_LAYER  &a01xx K7 K3                      &a01xx K5 K0      &a01xx K5 K1  &a1xx K4 K5  &to ERGOL_LAYER  &a01xx K7 K3
-                                &a01xx K5 K0  &a01xx K5 K1     &trans                            &trans            &trans        &trans
-            >;
+
+                            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
+                                     &trans &trans &trans               &trans &trans &trans
         };
 
 // Common layers -----------------------------------------------------------------------------------------------

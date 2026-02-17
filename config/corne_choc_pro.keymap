@@ -629,7 +629,7 @@
   &kp FR_Q  &kp FR_C             &kp FR_O               &kp FR_P                     &kp FR_W               &kp C_MUTE  &kp C_PP  &kp FR_J                    &kp FR_M                 &kp FR_D               &sl ERGOL_1DK_LAYER          &kp FR_Y
   &kp FR_A  &HRM_LGUI LWIN FR_S  &HRM_LCTRL LCTRL FR_E  &HRM_LALT LEFT_ALT FR_N      &kp FR_F               &kp LALT    &kp RALT  &kp FR_L                    &HRM_RALT LEFT_ALT FR_R  &HRM_RCTRL RCTRL FR_T  &HRM_RGUI RWIN FR_I  &kp FR_U
   &kp FR_Z  &kp FR_X             &kp FR_MINS            &kp FR_V                     &kp FR_B                                     &kp FR_DOT                  &kp FR_H                 &kp FR_G               &kp FR_COMM          &kp FR_K
-                                 &lm ERGOL_SLAYER LSHIFT  &BCKSPC_NAVNUM NUM_NAV_LAYER SPACE LTHUMB_REACH    RTHUMB_REACH  RTHUMB_HOME  &mo ERGOL_SYM
+                                 &lm ERGOL_SLAYER LSHIFT  &BCKSPC_NAVNUM ERGOL_NUMNAV BACKSPACE LTHUMB_REACH    RTHUMB_REACH  RTHUMB_HOME  &mo ERGOL_SYM
             >;
         };
 

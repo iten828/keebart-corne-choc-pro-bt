@@ -24,12 +24,13 @@
 #define EL_SSYM       11
 #define EL_NUMNAV     12
 #define EL_SNUMNAV    13
+#define EL_NUMLOCK    14
 
-#define FUNCTION_LAYER  14
-#define BT              15
+#define FUNCTION_LAYER  15
+#define BT              16
 // Potentially used by other keymaps deriving from this one, who may add extra layers.
 // Make sure this stays equal to <index_of_last_layer> + 1
-#define EXTRA_LAYERS_START_INDEX 16
+#define EXTRA_LAYERS_START_INDEX 17
 
 
 /**

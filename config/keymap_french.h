@@ -15,12 +15,12 @@
  */
 
 #pragma once
-
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/hid_usage.h>
 #include <dt-bindings/zmk/hid_usage_pages.h>
 #include <dt-bindings/zmk/modifiers.h>
 #include <dt-bindings/zmk/keys.h>
-#include <behaviors.dtsi>
+
 // clang-format off
 
 /*

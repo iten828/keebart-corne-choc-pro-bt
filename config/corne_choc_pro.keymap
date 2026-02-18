@@ -544,13 +544,13 @@
             // |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP   |  Y  |  U   |  I  |  O  |  P  |
             // |  A  |  S  |  D  |  F  |  G  |  LALT |  RALT |  H  |  J   |  K  |  L  |  ;  |
             // |  Z  |  X  |  C  |  V  |  B  |               |  N  |  M   |  ,  |  .  |  /  |
-            //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
+            //             | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp C_MUTE  &kp C_PP  &kp Y  &kp U  &kp I      &kp O    &kp P
-  &kp A  HRM_S  HRM_D  HRM_F  &kp G  &kp LALT    &kp RALT  &kp H  HRM_J  HRM_K      HRM_L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V  &kp B                        &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
-                LTHUMB_TUCK  LTHUMB_HOME  LTHUMB_REACH    RTHUMB_REACH  RTHUMB_HOME  RTHUMB_TUCK
+  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp C_MUTE  &kp C_PP  &kp Y  &kp U  &kp I       &kp O    &kp P
+  &kp A  HRM_S  HRM_D  HRM_F  &kp G  &kp LALT    &kp RALT  &kp H  HRM_J  HRM_K       HRM_L    &kp SEMI
+  &kp Z  &kp X  &kp C  &kp V  &kp B                        &kp N  &kp M  &kp COMMA   &kp DOT  &kp FSLH
+       LTHUMB_TUCK  LTHUMB_HOME  LTHUMB_REACH    RTHUMB_REACH  RTHUMB_HOME RTHUMB_TUCK
             >;
         };
  
@@ -573,10 +573,10 @@
     symbols_layer {
       display-name = "Symbols";
       bindings = <
-        S_CARET S_LT    S_GT    S_DLLR  S_PRCNT   &trans        &trans  S_AT    S_AMPS  S_STAR  S_SQT   S_GRAVE
-        S_LBRC  S_LPAR  S_RPAR  S_RBRC  S_EQUAL   &trans        &trans  S_BSLH  S_PLUS  S_MINUS S_FSLH  S_DQT
-        S_TILDE S_LBKT  S_RBKT  S_UNDER S_HASH                  S_PIPE  S_EXCL  S_SEMI  S_COLON S_QMARK
-                    SYM_NUM_LAYER  &kp SPACE  &kp ENTER     &trans  &kp RALT  &trans
+  S_CARET S_LT    S_GT    S_DLLR  S_PRCNT   &trans        &trans  S_AT    S_AMPS  S_STAR  S_SQT   S_GRAVE
+  S_LBRC  S_LPAR  S_RPAR  S_RBRC  S_EQUAL   &trans        &trans  S_BSLH  S_PLUS  S_MINUS S_FSLH  S_DQT
+  S_TILDE S_LBKT  S_RBKT  S_UNDER S_HASH                          S_PIPE  S_EXCL  S_SEMI  S_COLON S_QMARK
+                  SYM_NUM_LAYER  &kp SPACE  &kp ENTER     &trans  &kp RALT  &trans
       >;
     };
 
@@ -586,10 +586,10 @@
     vim_nav_layer {
       display-name = "VimNav";
       bindings = <
-        &kp CAPS X_CLOSE  X_PREV   X_NEXT    &none  &trans        &trans  &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp DEL 
-        X_ALL    X_SAVE   X_SHTAB  &kp TAB   &none  &trans        &trans  &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
-        X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                       &none    &none     &none     &none     &none
-        &kp CAPSLOCK  &lt FUNCTION_LAYER DEL  &mo NUM_ROW_LAYER   &trans   &mo FUNCTION_LAYER  &EZ_LSK(RALT)
+  &kp CAPS X_CLOSE  X_PREV   X_NEXT    &none  &trans        &trans  &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp DEL 
+  X_ALL    X_SAVE   X_SHTAB  &kp TAB   &none  &trans        &trans  &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
+  X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                       &none    &none     &none     &none     &none
+  &kp CAPSLOCK  &lt FUNCTION_LAYER DEL  &mo NUM_ROW_LAYER   &trans   &mo FUNCTION_LAYER  &EZ_LSK(RALT)
       >;
     };
 
@@ -599,10 +599,10 @@
     num_nav_layer {
       display-name = "NumNav";
       bindings = <
-        &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans        &trans  &to NUM_LOCK_LAYER S_N7  S_N8  S_N9  S_FSLH
-        X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans        &trans  S_MINUS            S_N4  S_N5  S_N6  S_N0
-        X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                           S_COMMA            S_N1  S_N2  S_N3  S_DOT
-               &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT)
+  &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans        &trans  &to NUM_LOCK_LAYER S_N7  S_N8  S_N9  S_FSLH
+  X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans        &trans  S_MINUS            S_N4  S_N5  S_N6  S_N0
+  X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                           S_COMMA            S_N1  S_N2  S_N3  S_DOT
+           &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT)
       >;
     };
 
@@ -612,10 +612,10 @@
     num_row_layer {
       display-name = "NumRow";
       bindings = <
-        &kp RS(N1) &kp RS(N2) &kp RS(N3) &kp RS(N4) &kp RS(N5)  &trans        &trans     &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0) 
-        &kp N1     &kp N2     &kp N3     &kp N4     &kp N5      &trans        &trans     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
-        &none      &none      &none      &none      &none                                S_MINUS    S_COMMA    S_DOT      S_COLON    S_FSLH
-                                      &trans  &kp RS(SPACE) &trans           &trans  &kp LS(SPACE) &kp RALT
+  &kp RS(N1) &kp RS(N2) &kp RS(N3) &kp RS(N4) &kp RS(N5)  &trans        &trans     &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0) 
+  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5      &trans        &trans     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+  &none      &none      &none      &none      &none                                S_MINUS    S_COMMA    S_DOT      S_COLON    S_FSLH
+                                    &trans  &kp RS(SPACE) &trans        &trans  &kp LS(SPACE) &kp RALT
       >;
     };
 // Ergo-l over Windows Azerty ----------------------------------------------------------------------------------
@@ -626,10 +626,10 @@
             label = "Ergo-l";
             display-name = "Ergo-l";
             bindings = <
-  &kp FR_Q  &kp FR_C             &kp FR_O               &kp FR_P                     &kp FR_W               &kp C_MUTE  &kp C_PP  &kp FR_J                    &kp FR_M                 &kp FR_D               &sl ERGOL_1DK_LAYER          &kp FR_Y
-  &kp FR_A  &HRM_LGUI LWIN FR_S  &HRM_LCTRL LCTRL FR_E  &HRM_LALT LEFT_ALT FR_N      &kp FR_F               &kp LALT    &kp RALT  &kp FR_L                    &HRM_RALT LEFT_ALT FR_R  &HRM_RCTRL RCTRL FR_T  &HRM_RGUI RWIN FR_I  &kp FR_U
-  &kp FR_Z  &kp FR_X             &kp FR_MINS            &kp FR_V                     &kp FR_B                                     &kp FR_DOT                  &kp FR_H                 &kp FR_G               &kp FR_COMM          &kp FR_K
-                                 &lm ERGOL_SLAYER LSHIFT  &BCKSPC_NAVNUM ERGOL_NUMNAV BACKSPACE LTHUMB_REACH    RTHUMB_REACH  &SPACE_NAVNUM ERGOL_NUMNAV SPACE &mo ERGOL_SYM
+  &kp FR_Q  &kp FR_C             &kp FR_O                 &kp FR_P                 &kp FR_W                &kp C_MUTE  &kp C_PP  &kp FR_J      &kp FR_M                 &kp FR_D                          &sl ERGOL_1DK_LAYER  &kp FR_Y
+  &kp FR_A  &HRM_LGUI LWIN FR_S  &HRM_LCTRL LCTRL FR_E    &HRM_LALT LEFT_ALT FR_N  &kp FR_F                &kp LALT    &kp RALT  &kp FR_L      &HRM_RALT LEFT_ALT FR_R  &HRM_RCTRL RCTRL FR_T             &HRM_RGUI RWIN FR_I  &kp FR_U
+  &kp FR_Z  &kp FR_X             &kp FR_MINS              &kp FR_V                 &kp FR_B                                      &kp FR_DOT    &kp FR_H                 &kp FR_G                          &kp FR_COMM          &kp FR_K
+                                 &lm ERGOL_SLAYER LSHIFT  &BCKSPC_NAVNUM           ERGOL_NUMNAV BACKSPACE                        LTHUMB_REACH  RTHUMB_REACH             SPACE_NAVNUM ERGOL_NUMNAV SPACE   &mo ERGOL_SYM
             >;
         };
 
@@ -640,10 +640,10 @@
             label = "Shift";
             display-name = "Shift";
             bindings = <
-  &trans       &trans  &trans  &trans       &trans    &trans      &trans  &trans  &trans   &trans  &UnS FR_EXLM      &trans
-  &trans &trans  &trans   &trans      &trans    &trans  &trans  &trans            &trans   &trans  &trans       &trans
-  &trans      &trans  &UnS FR_QUES   &trans  &trans                      &UnS FR_COLN     &trans  &trans  &UnS FR_SCLN  &trans
-                                &trans  &trans     &trans                            &trans            &trans        &trans
+  &trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans        &trans  &trans  &UnS FR_EXLM  &trans
+  &trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans        &trans  &trans  &trans        &trans
+  &trans  &trans  &UnS FR_QUES   &trans  &trans                      &UnS FR_COLN  &trans  &trans  &UnS FR_SCLN  &trans
+                                 &trans  &trans  &trans      &trans  &trans        &trans
             >;
         };
 
@@ -654,10 +654,10 @@
             label = "1dk";
             display-name = "1dk";
             bindings = <
-  &circ FR_A       &kp FR_CCED      &a01xx K5 K6  &circ FR_O       &kp FR_DEG    &trans  &trans  &to ERGOL_LAYER   &kp FR_MICR   &kp FR_UNDS     &kp FR_DIAE       &circ FR_U
-  &kp FR_AGRV      &kp FR_EACU      &kp FR_EGRV   &circ FR_E       &tild FR_N    &trans  &trans  &kp FR_LPRN       &kp FR_RPRN   &circ FR_I       &diae FR_I       &kp FR_UGRV
-  &a1xx K4 K5      &to ERGOL_LAYER  &a01xx K7 K3  &a01xx K5 K0     &a01xx K5 K1                  &a01xx K3 K3      &https        &to ERGOL_LAYER  &to ERGOL_LAYER  &a01xx K6 K9
-                                          &sl ERGOL_S1DK_LAYER  &trans           &trans   &trans            &trans        &trans
+  &circ FR_A       &kp FR_CCED      &a01xx K5 K6  &circ FR_O            &kp FR_DEG    &trans  &trans  &to ERGOL_LAYER  &kp FR_MICR   &kp FR_UNDS      &kp FR_DIAE      &circ FR_U
+  &kp FR_AGRV      &kp FR_EACU      &kp FR_EGRV   &circ FR_E            &tild FR_N    &trans  &trans  &kp FR_LPRN      &kp FR_RPRN   &circ FR_I       &diae FR_I       &kp FR_UGRV
+  &a1xx K4 K5      &to ERGOL_LAYER  &a01xx K7 K3  &a01xx K5 K0          &a01xx K5 K1                  &a01xx K3 K3     &https        &to ERGOL_LAYER6  &to ERGOL_LAYER  &a01xx K6 K9
+                                                  &sl ERGOL_S1DK_LAYER  &trans        &trans  &trans  &trans           &trans
             >;
         };
 
@@ -668,10 +668,10 @@
             label = "s1dk";
             display-name = "s1dk";
             bindings = <
-  &circ LS(FR_A)      &a01xx K9 K9     &a01xx K4 K0   &circ LS(FR_O)  &to ERGOL_LAYER  &trans           &trans  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &circ LS(FR_U)   &to ERGOL_LAYER
-  &agrv LS(FR_A)   &a1xx K4 K4      &agrv LS(FR_E)   &circ LS(FR_E)   &tild LS(FR_N)   &trans           &trans  &to ERGOL_LAYER  &to ERGOL_LAYER  &circ LS(FR_I)   &diae LS(FR_I)   &agrv LS(FR_U) 
-  &a01xx K9 K8  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER                           &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &a01xx K4 K9  &a01xx K7 K4
-                                                   &trans           &trans     &trans                           &trans            &trans        &trans
+  &circ LS(FR_A)  &a01xx K9 K9     &a01xx K4 K0     &circ LS(FR_O)   &to ERGOL_LAYER  &trans      &trans  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &circ LS(FR_U)   &to ERGOL_LAYER
+  &agrv LS(FR_A)  &a1xx K4 K4      &agrv LS(FR_E)   &circ LS(FR_E)   &tild LS(FR_N)   &trans      &trans  &to ERGOL_LAYER  &to ERGOL_LAYER  &circ LS(FR_I)   &diae LS(FR_I)   &agrv LS(FR_U) 
+  &a01xx K9 K8    &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER                      &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &a01xx K4 K9  &a01xx K7 K4
+                                                    &trans           &trans           &trans      &trans  &trans           &trans
             >;
         };
         
@@ -682,10 +682,11 @@
             label = "sym";
             display-name = "sym";
             bindings = <
-                                        &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
-                                     &trans &trans &trans               &trans &trans &trans
+  &kp FR_CIRC &kp FR_LABK &kp FR_RABK &kp FR_DLR  &kp FR_PERC  &trans   &trans   &kp FR_AT   &kp FR_AMPR &kp FR_ASTR &kp FR_QUOT &kp FR_GRV
+  &kp FR_LCBR &kp FR_LPRN &kp FR_RPRN &kp FR_RCBR &kp FR_EQL   &trans   &trans   &kp FR_BSLS &kp FR_PLUS &kp FR_MINS &kp FR_SLSH &kp FR_DQUO 
+  &kp FR_TILD &kp FR_LBRC &kp FR_RBRC &kp FR_UNDS &kp FR_HASH                    &kp FR_PIPE &kp FR_EXLM &kp FR_SCLN &kp FR_COLN &kp FR_QUES
+                                    &mo ERGOL_SSYM &trans &trans               &trans &trans &trans
+
             >;
         };
 
@@ -696,10 +697,10 @@
             label = "ssym";
             display-name = "ssym";
             bindings = <
-                                        &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
-                                     &trans &trans &trans               &trans &trans &trans
+  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+  &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans
+                &trans &trans &trans               &trans &trans &trans
             >;
         };
 
@@ -710,10 +711,10 @@
             label = "ergol-NumNav";
             display-name = "NumNav";
             bindings = <
-        &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans        &trans  &to NUM_LOCK_LAYER     &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
-        X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans        &trans  &kp FR_MINS            &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
-        X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                           &kp FR_COMM            &kp FR_1   &kp FR_2  &kp FR_3  &kp FR_DOT
-            &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT)
+  &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans        &trans  &to NUM_LOCK_LAYER     &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
+  X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans        &trans  &kp FR_MINS            &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
+  X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                           &kp FR_COMM            &kp FR_1   &kp FR_2  &kp FR_3  &kp FR_DOT
+      &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT)
             >;
         };
 
@@ -724,11 +725,10 @@
             label = "snumnav";
             display-name = "sNumNav";
             bindings = <
-
-                            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
-                                     &trans &trans &trans               &trans &trans &trans
+  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+  &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans
+  &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT)
             >;
         };
 

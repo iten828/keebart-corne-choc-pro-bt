@@ -192,20 +192,21 @@
   &kp FR_Q  &kp FR_C             &kp FR_O               &kp FR_P                 &kp FR_W    &kp C_MUTE  &kp C_PP  &kp FR_J      &kp FR_M                 &kp FR_D                 &sl EL_1DK_LAYER     &kp FR_Y
   &kp FR_A  &HRM_LGUI LWIN FR_S  &HRM_LCTRL LCTRL FR_E  &HRM_LALT LEFT_ALT FR_N  &kp FR_F    &kp LALT    &kp RALT  &kp FR_L      &HRM_RALT LEFT_ALT FR_R  &HRM_RCTRL RCTRL FR_T    &HRM_RGUI RWIN FR_I  &kp FR_U
   &kp FR_Z  &kp FR_X             &kp FR_MINS            &kp FR_V                 &kp FR_B                          &kp FR_DOT    &kp FR_H                 &kp FR_G                 &kp FR_COMM          &kp FR_K
-                                 &lm EL_SLAYER LSHIFT   &BCKSPC_NAVNUM EL_NUMNAV BACKSPACE LTHUMB_REACH    RTHUMB_REACH  &SPACE_NAVNUM EL_NUMNAV SPACE   &mo EL_SYM
+                                 &mo EL_SLAYER          &BCKSPC_NAVNUM EL_NUMNAV BACKSPACE LTHUMB_REACH    RTHUMB_REACH  &SPACE_NAVNUM EL_NUMNAV SPACE   &mo EL_SYM
             >;
         };
 
     // 7. Ergol Shift --
-    //                 -- 
-    //  
+    //                -- On shifte les touches 1 à 1 plutôt que d’utilser un shift global 
+    //                -- Ça permet de ne pas avoir shift en modifieur afin d’avoir une
+    //                -- meilleure gestion du shift sur les couches sym et navnum
         sergol-layer {
             label = "Shift";
             display-name = "Shift";
             bindings = <
-  &trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans          &trans  &trans  &UnS FR_EXLM  &trans
-  &trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans          &trans  &trans  &trans        &trans
-  &trans  &trans  &UnS FR_QUES   &trans  &trans                      &UnS FR_COLN    &trans  &trans  &UnS FR_SCLN  &trans
+  &kp LS(FR_Q)  &kp LS(FR_C)  &kp LS(FR_O)  &kp LS(FR_P)  &kp LS(FR_W)  &trans      &trans    &kp LS(FR_J)   &kp LS(FR_M)  &kp LS(FR_D)   &kp FR_EXLM   &kp LS(FR_Y)
+  &kp LS(FR_A)  &kp LS(FR_S)  &kp LS(FR_E)  &kp LS(FR_N)  &kp LS(FR_F)  &kp LALT    &kp RALT  &kp LS(FR_L)   &kp LS(FR_R)  &kp LS(FR_T)   &kp LS(FR_I)  &kp LS(FR_U)
+  &kp LS(FR_Z)  &kp LS(FR_X)  &kp FR_QUES   &kp LS(FR_V)  &kp LS(FR_B)                        &kp FR_COLN    &kp LS(FR_H)  &kp LS(FR_G)   &UnS FR_SCLN  &kp LS(FR_K)
                                  &none   &trans  &trans      &trans  &mo EL_SNUMNAV  &mo EL_SSYM
             >;
         };
@@ -253,17 +254,16 @@
             >;
         };
 
-    // 11. Ergol SSYM  -- À compléter, ne fonctionne que via sym+shift, mais pas shift+sym
-    //                 -- de manière générale, le shift pose problème, 
-    //                 -- à voir si je remplace le shift du layer principal ergol-layer par un faux shift
-    //                 -- comme pour la shift 1dk
+    // 11. Ergol SSYM  -- 
+    //                 -- 
+
         sergol_sym_layer {
             label = "ssym";
             display-name = "ssym";
             bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans       &trans        &a02xx K1 K5  &trans        &trans  // multip
-  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans       &a01xx K7 K7  &a01xx K7 K5  &a02xx K4 K7  &trans  // plusmoins, macron,div
-  &trans  &trans  &trans  &trans  &trans                      &a2xx K2 K1  &trans        &trans        &trans        &trans
+  &none  &none  &none  &none  &none &trans      &trans  &none        &none         &a02xx K1 K5  &none         &none  // ×
+  &none  &none  &none  &none  &none &trans      &trans  &none        &a01xx K7 K7  &a01xx K7 K5  &a02xx K4 K7  &none  // ±,¯,÷
+  &none  &none  &none  &none  &none                     &a2xx K2 K1  &none         &none         &none         &none  // ¦
                         &trans   &trans   &trans      &trans  &trans       &trans
             >;
         };
@@ -283,17 +283,15 @@
         };
 
     // 13. Ergol Shift NumNav -- 
-    //                 -- de manière générale, le shift pose problème, 
-    //                 -- à voir si je remplace le shift du layer principal ergol-layer par un faux shift
-    //                 -- comme pour la shift 1dk
+    //                        --
         sergol_numnav_layer {
             label = "snumnav";
             display-name = "sNumNav";
             bindings = <
-  &kp ESC  &kp LS(HOME) &kp LS(UP)   &kp LS(END)   &kp LS(PG_UP)  &trans        &trans  &to EL_NUMLOCK  &UnS FR_AMPR  &UnS FR_ASTR  &UnS FR_HASH  &UnS FR_SLSH
-  X_ALL    &kp LS(LEFT) &kp LS(DOWN) &kp LS(RIGHT) &kp LS(PG_DN)  &trans        &trans  &UnS FR_MINS     &UnS FR_DLR   &UnS FR_PERC  &UnS FR_CIRC  &UnS FR_AT
-  X_UNDO   X_CUT        X_COPY       X_PASTE       X_REDO                               &UnS FR_COMM     &UnS FR_EURO  &none         &none         &UnS FR_DOT  // &a1xx K7 K4  &a1xx K7 K5
-                                &trans  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &trans   &EZ_LSK(RALT)                                                 // probablement possible avec une macro pour release le shift
+  &kp ESC  &kp LS(HOME) &kp LS(UP)   &kp LS(END)   &kp LS(PG_UP)  &trans        &trans  &kp EL_NUMLOCK  &kp FR_AMPR  &kp FR_ASTR  &kp FR_HASH  &kp FR_SLSH
+  X_ALL    &kp LS(LEFT) &kp LS(DOWN) &kp LS(RIGHT) &kp LS(PG_DN)  &trans        &trans  &kp FR_MINS     &kp FR_DLR   &kp FR_PERC  &kp FR_CIRC  &kp FR_AT
+  X_UNDO   X_CUT        X_COPY       X_PASTE       X_REDO                               &kp FR_COMM     &kp FR_EURO  &a1xx K7 K4  &a1xx K7 K5  &kp FR_DOT   
+                                &trans  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &trans   &EZ_LSK(RALT)                                          
             >;
         };
 

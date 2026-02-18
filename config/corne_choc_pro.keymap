@@ -239,7 +239,7 @@
         };
         
     // 10. Ergol SYM   --
-    //                    -- 
+    //                 -- 
     //  
         ergol_sym_layer {
             label = "sym";
@@ -253,8 +253,9 @@
             >;
         };
 
-    // 11. Ergol SSYM  --
-    //                    -- 
+    // 11. Ergol SSYM  -- À compléter, ne fonctionne que via sym+shift, mais pas shift+sym
+    //                 -- de manière générale, le shift pose problème, 
+    //                 -- à voir si je remplace le shift du layer principal ergol-layer par un faux shift
     //  
         sergol_sym_layer {
             label = "ssym";
@@ -274,15 +275,15 @@
             label = "ergol-NumNav";
             display-name = "NumNav";
             bindings = <
-  &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans        &trans  &to EL_NUMLOCK         &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
-  X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans        &trans  &kp FR_MINS            &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
-  X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                           &kp FR_COMM            &kp FR_1   &kp FR_2  &kp FR_3  &kp FR_DOT
-      &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT)
+  &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans            &trans  &to EL_NUMLOCK         &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
+  X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans            &trans  &kp FR_MINS            &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
+  X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                               &kp FR_COMM            &kp FR_1   &kp FR_2  &kp FR_3  &kp FR_DOT
+      &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT) // ajouter un modtap capslock/snumnav ?
             >;
         };
 
-    // 13. Ergol Shift NumNav --
-    //                 -- 
+    // 13. Ergol Shift NumNav -- de manière générale, le shift pose problème, à voir si je remplace le shift du layer principal ergol-layer par un faux shift
+    //                        -- 
     //  
         sergol_numnav_layer {
             label = "snumnav";
@@ -291,7 +292,7 @@
   &kp ESC  &kp LS(HOME) &kp LS(UP)   &kp LS(END)   &kp LS(PG_UP)  &trans        &trans  &to EL_NUMLOCK  &UnS FR_AMPR  &UnS FR_ASTR  &UnS FR_HASH  &UnS FR_SLSH
   X_ALL    &kp LS(LEFT) &kp LS(DOWN) &kp LS(RIGHT) &kp LS(PG_DN)  &trans        &trans  &UnS FR_MINS     &UnS FR_DLR   &UnS FR_PERC  &UnS FR_CIRC  &UnS FR_AT
   X_UNDO   X_CUT        X_COPY       X_PASTE       X_REDO                               &UnS FR_COMM     &UnS FR_EURO  &none         &none         &UnS FR_DOT  // &a1xx K7 K4  &a1xx K7 K5
-  &trans  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &trans   &EZ_LSK(RALT)
+                                &trans  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &trans   &EZ_LSK(RALT)                                                 // probablement possible avec une macro pour release le shift
             >;
         };
 

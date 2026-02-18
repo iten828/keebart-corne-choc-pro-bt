@@ -177,6 +177,16 @@
 #define OSX_SECT N6
 #define OSX_PND LS(OSX_GRV)
 
+#define K0 KP_N0
+#define K1 KP_N1
+#define K2 KP_N2
+#define K3 KP_N3
+#define K4 KP_N4
+#define K5 KP_N5
+#define K6 KP_N6
+#define K7 KP_N7
+#define K8 KP_N8
+#define K9 KP_N9
 / {
     macros {
         lm: lm {

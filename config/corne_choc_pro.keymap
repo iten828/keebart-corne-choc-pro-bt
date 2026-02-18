@@ -270,7 +270,20 @@
             >;
         };
 
-    // 12. Ergol NumNav --
+    // 12. Ergol NumLock --
+    //                 -- 
+    //  
+        ergol_num_lock_layer {
+            display-name = "NumLock";
+            bindings = <
+  &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans  &trans  &to EL_LAYER  &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
+  S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans  &trans  &kp FR_MINS   &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
+  S_MONEY  S_COLON  S_STAR   S_PLUS    S_PRCNT                    &kp FR_COMM   &kp FR_1   &kp FR_2  &kp FR_3  &kp FR_DOT
+  &mo EL_SNUMNAV  &sc EL_NUMNAV BACKSPACE  &kp (TAB)  &trans  &lt EL_NUMNAV LS(SPACE)  &EZ_SL(EL_SYM)
+            >;
+        };
+
+    // 13. Ergol NumNav --
     //                  -- 
     //  
         ergol_numnav_layer {
@@ -284,7 +297,7 @@
             >;
         };
 
-    // 13. Ergol Shift NumNav -- 
+    // 14. Ergol Shift NumNav -- 
     //                        --
         sergol_numnav_layer {
             label = "snumnav";
@@ -297,18 +310,7 @@
             >;
         };
 
-    // 14. Ergol NumLock --
-    //                 -- 
-    //  
-        ergol_num_lock_layer {
-            display-name = "NumLock";
-            bindings = <
-  &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans  &trans  &to EL_LAYER  &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
-  S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans  &trans  &kp FR_MINS   &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
-  S_MONEY  S_COLON  S_STAR   S_PLUS    S_PRCNT                    &kp FR_COMM   &kp FR_1   &kp FR_2  &kp FR_3  &kp FR_DOT
-  &mo EL_SNUMNAV  &sc EL_NUMNAV BACKSPACE  &kp (TAB)  &trans  &lt EL_NUMNAV LS(SPACE)  &EZ_SL(EL_SYM)
-            >;
-        };
+
 // Common layers -----------------------------------------------------------------------------------------------
     // 15. Functions layer --
     //                    -- 

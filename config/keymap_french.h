@@ -176,6 +176,8 @@
 #define OSX_QUOTFR LS(LA(N4))
 #define OSX_SECT N6
 #define OSX_PND LS(OSX_GRV)
+
+/ {
     macros {
         lm: lm {
             compatible = "zmk,behavior-macro-two-param";
@@ -498,3 +500,4 @@
                 <&kp FR_SLSH>;
         };
     };
+}

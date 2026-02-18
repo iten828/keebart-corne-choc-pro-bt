@@ -263,7 +263,7 @@
             label = "ssym";
             display-name = "ssym";
             bindings = <
-  &none        &none  &none  &none  &a01xx K3 K7  &trans    &trans  &none        &none         &a02xx K1 K5  &none         &none  // ‰,×
+  &kp FR_CIRC  &none  &none  &none  &a01xx K3 K7  &trans    &trans  &none        &none         &a02xx K1 K5  &none         &none  // ‰,×
   &none        &none  &none  &none  &none &trans            &trans  &none        &a01xx K7 K7  &a01xx K7 K5  &a02xx K4 K7  &none  // ±,¯,÷
   &kp FR_TILD  &none  &none  &none  &none                           &a2xx K2 K1  &none         &none         &none         &none  // ¦
                                 &trans   &trans   &trans    &trans  &trans       &trans

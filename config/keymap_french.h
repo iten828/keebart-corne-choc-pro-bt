@@ -333,6 +333,24 @@
                 <&kp LALT>;
         };
 
+        a0xx: a0xx {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            wait-ms = <20>;
+            tap-ms = <20>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER &macro_param_2to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
         a1xx: a1xx {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;

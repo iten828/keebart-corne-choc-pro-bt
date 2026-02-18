@@ -656,7 +656,7 @@
             bindings = <
   &circ FR_A       &kp FR_CCED      &a01xx K5 K6  &circ FR_O            &kp FR_DEG    &trans  &trans  &to ERGOL_LAYER  &kp FR_MICR   &kp FR_UNDS      &kp FR_DIAE      &circ FR_U
   &kp FR_AGRV      &kp FR_EACU      &kp FR_EGRV   &circ FR_E            &tild FR_N    &trans  &trans  &kp FR_LPRN      &kp FR_RPRN   &circ FR_I       &diae FR_I       &kp FR_UGRV
-  &a1xx K4 K5      &to ERGOL_LAYER  &a01xx K7 K3  &a01xx K5 K0          &a01xx K5 K1                  &a01xx K3 K3     &https        &to ERGOL_LAYER6  &to ERGOL_LAYER  &a01xx K6 K9
+  &a1xx K4 K5      &to ERGOL_LAYER  &a01xx K7 K3  &a01xx K5 K0          &a01xx K5 K1                  &a01xx K3 K3     &https        &to ERGOL_LAYER  &to ERGOL_LAYER  &a01xx K6 K9
                                                   &sl ERGOL_S1DK_LAYER  &trans        &trans  &trans  &trans           &trans
             >;
         };

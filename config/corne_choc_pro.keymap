@@ -82,7 +82,8 @@
 #include <dt-bindings/zmk/rgb.h>
 #include "aliases.h"       // defines symbols and actions
 #include "hold_taps.dtsi"  // defines thumb keys and homerow mods
-#include "keymap_french.h" // defines keys for ergo-l over windows azerty
+#include "hold_taps_emul.dtsi"  // defines thumb keys and homerow mods for ergo-l emulation over windows azerty
+#include "keymap_french.h"      // defines keys for ergo-l emulation over windows azerty
 
 
 / {
@@ -187,10 +188,10 @@
             label = "Ergo-l";
             display-name = "Ergo-l";
             bindings = <
-  &kp FR_Q  &kp FR_C             &kp FR_O                 &kp FR_P                 &kp FR_W                &kp C_MUTE  &kp C_PP  &kp FR_J      &kp FR_M                 &kp FR_D                          &sl ERGOL_1DK_LAYER  &kp FR_Y
-  &kp FR_A  &HRM_LGUI LWIN FR_S  &HRM_LCTRL LCTRL FR_E    &HRM_LALT LEFT_ALT FR_N  &kp FR_F                &kp LALT    &kp RALT  &kp FR_L      &HRM_RALT LEFT_ALT FR_R  &HRM_RCTRL RCTRL FR_T             &HRM_RGUI RWIN FR_I  &kp FR_U
-  &kp FR_Z  &kp FR_X             &kp FR_MINS              &kp FR_V                 &kp FR_B                                      &kp FR_DOT    &kp FR_H                 &kp FR_G                          &kp FR_COMM          &kp FR_K
-                                 &lm ERGOL_SLAYER LSHIFT  &BCKSPC_NAVNUM ERGOL_NUMNAV BACKSPACE    LTHUMB_REACH               RTHUMB_REACH             &SPACE_NAVNUM ERGOL_NUMNAV SPACE   &mo ERGOL_SYM
+  &kp FR_Q  &kp FR_C             &kp FR_O               &kp FR_P                 &kp FR_W    &kp C_MUTE  &kp C_PP  &kp FR_J      &kp FR_M                 &kp FR_D                 &sl EL_1DK_LAYER     &kp FR_Y
+  &kp FR_A  &HRM_LGUI LWIN FR_S  &HRM_LCTRL LCTRL FR_E  &HRM_LALT LEFT_ALT FR_N  &kp FR_F    &kp LALT    &kp RALT  &kp FR_L      &HRM_RALT LEFT_ALT FR_R  &HRM_RCTRL RCTRL FR_T    &HRM_RGUI RWIN FR_I  &kp FR_U
+  &kp FR_Z  &kp FR_X             &kp FR_MINS            &kp FR_V                 &kp FR_B                          &kp FR_DOT    &kp FR_H                 &kp FR_G                 &kp FR_COMM          &kp FR_K
+                                 &lm EL_SLAYER LSHIFT   &BCKSPC_NAVNUM EL_NUMNAV BACKSPACE LTHUMB_REACH    RTHUMB_REACH  &SPACE_NAVNUM EL_NUMNAV SPACE   &mo EL_SYM
             >;
         };
 
@@ -204,7 +205,7 @@
   &trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans        &trans  &trans  &UnS FR_EXLM  &trans
   &trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans        &trans  &trans  &trans        &trans
   &trans  &trans  &UnS FR_QUES   &trans  &trans                      &UnS FR_COLN  &trans  &trans  &UnS FR_SCLN  &trans
-                                 &trans  &trans  &trans      &trans  &lm ERGOL_SNUMNAV LSHIFT        &mo ERGOL_SSYM
+                                 &trans  &trans  &trans      &trans  &lm EL_SNUMNAV LSHIFT        &mo EL_SSYM
             >;
         };
  
@@ -215,10 +216,10 @@
             label = "1dk";
             display-name = "1dk";
             bindings = <
-  &circ FR_A       &kp FR_CCED      &a01xx K5 K6  &circ FR_O            &kp FR_DEG    &trans  &trans  &to ERGOL_LAYER  &kp FR_MICR   &kp FR_UNDS      &kp FR_DIAE      &circ FR_U
-  &kp FR_AGRV      &kp FR_EACU      &kp FR_EGRV   &circ FR_E            &tild FR_N    &trans  &trans  &kp FR_LPRN      &kp FR_RPRN   &circ FR_I       &diae FR_I       &kp FR_UGRV
-  &a1xx K4 K5      &a02xx K2 K3  &a01xx K7 K3  &a01xx K5 K0          &a01xx K5 K1                  &a01xx K3 K3     &https        &to ERGOL_LAYER  &a01xx K8 K3     &a01xx K6 K9
-                                                  &sl ERGOL_S1DK_LAYER  &trans        &trans  &trans  &trans           &trans
+  &circ FR_A       &kp FR_CCED      &a01xx K5 K6  &circ FR_O            &kp FR_DEG    &trans  &trans  &to EL_LAYER  &kp FR_MICR   &kp FR_UNDS      &kp FR_DIAE      &circ FR_U
+  &kp FR_AGRV      &kp FR_EACU      &kp FR_EGRV   &circ FR_E            &tild FR_N    &trans  &trans  &kp FR_LPRN      &kp FR_RPRN   &circ FR_I    &diae FR_I       &kp FR_UGRV
+  &a1xx K4 K5      &a02xx K2 K3     &a01xx K7 K3  &a01xx K5 K0          &a01xx K5 K1                  &a01xx K3 K3     &https        &to EL_LAYER  &a01xx K8 K3     &a01xx K6 K9
+                                                  &sl EL_S1DK_LAYER  &trans        &trans  &trans  &trans           &trans
             >;
         };
 
@@ -229,9 +230,9 @@
             label = "s1dk";
             display-name = "s1dk";
             bindings = <
-  &circ LS(FR_A)  &a01xx K9 K9     &a01xx K4 K0     &circ LS(FR_O)   &to ERGOL_LAYER  &trans      &trans  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &circ LS(FR_U)   &to ERGOL_LAYER
-  &agrv LS(FR_A)  &a1xx K4 K4      &agrv LS(FR_E)   &circ LS(FR_E)   &tild LS(FR_N)   &trans      &trans  &to ERGOL_LAYER  &to ERGOL_LAYER  &circ LS(FR_I)   &diae LS(FR_I)   &agrv LS(FR_U) 
-  &a01xx K9 K8    &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER                      &to ERGOL_LAYER  &to ERGOL_LAYER  &to ERGOL_LAYER  &ax K7           &a01xx K7 K4
+  &circ LS(FR_A)  &a01xx K9 K9  &a01xx K4 K0    &circ LS(FR_O)  &to EL_LAYER    &trans      &trans  &to EL_LAYER  &to EL_LAYER  &to EL_LAYER    &circ LS(FR_U)   &to EL_LAYER
+  &agrv LS(FR_A)  &a1xx K4 K4   &agrv LS(FR_E)  &circ LS(FR_E)  &tild LS(FR_N)  &trans      &trans  &to EL_LAYER  &to EL_LAYER  &circ LS(FR_I)  &diae LS(FR_I)   &agrv LS(FR_U) 
+  &a01xx K9 K8    &to EL_LAYER  &to EL_LAYER    &to EL_LAYER    &to EL_LAYER                        &to EL_LAYER  &to EL_LAYER  &to EL_LAYER    &ax K7           &a01xx K7 K4
                                                     &trans           &trans           &trans      &trans  &trans           &trans
             >;
         };
@@ -246,7 +247,7 @@
   &kp FR_CIRC &kp FR_LABK &kp FR_RABK &kp FR_DLR  &kp FR_PERC  &trans   &trans   &kp FR_AT   &kp FR_AMPR &kp FR_ASTR &kp FR_QUOT &kp FR_GRV
   &kp FR_LCBR &kp FR_LPRN &kp FR_RPRN &kp FR_RCBR &kp FR_EQL   &trans   &trans   &kp FR_BSLS &kp FR_PLUS &kp FR_MINS &kp FR_SLSH &kp FR_DQUO 
   &kp FR_TILD &kp FR_LBRC &kp FR_RBRC &kp FR_UNDS &kp FR_HASH                    &kp FR_PIPE &kp FR_EXLM &kp FR_SCLN &kp FR_COLN &kp FR_QUES
-                                    &mo ERGOL_SSYM &trans &trans               &trans &trans &trans
+                                    &mo EL_SSYM &trans &trans                    &trans &trans &trans
 
             >;
         };
@@ -258,15 +259,15 @@
             label = "ssym";
             display-name = "ssym";
             bindings = <
-  &trans &trans &trans &trans &trans &trans &trans &trans &trans &a02xx K1 K5 &trans &trans  // multip
-  &trans &trans &trans &trans &trans &trans &trans &trans &a01xx K7 K7 &a01xx K7 K5  &a02xx K4 K7 &trans  //plusmoins, macron,div
-  &trans &trans &trans &trans &trans               &a2xx K2 K1 &trans &trans &trans &trans
-                &trans &trans &trans               &trans &trans &trans
+  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans       &trans        &a02xx K1 K5  &trans        &trans  // multip
+  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans       &a01xx K7 K7  &a01xx K7 K5  &a02xx K4 K7  &trans  //plusmoins, macron,div
+  &trans  &trans  &trans  &trans  &trans                      &a2xx K2 K1  &trans        &trans        &trans        &trans
+                        &trans   &trans   &trans      &trans  &trans       &trans
             >;
         };
 
     // 12. Ergol NumNav --
-    //                 -- 
+    //                  -- 
     //  
         ergol_numnav_layer {
             label = "ergol-NumNav";
@@ -301,7 +302,7 @@
             label = "Functions";
             display-name = "Functions";
             bindings = <
-  &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &trans  &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans            &to ERGOL_LAYER
+  &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &trans  &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans            &to EL_LAYER
   &kp F5  &kp F6   &kp F7   &kp F8   &rgb_ug RGB_EFF                 &trans  &trans  &trans  &kp K_VOLUME_DOWN     &kp K_VOLUME_UP       &kp K_MUTE        &trans
   &kp F9  &kp F10  &kp F11  &kp F12  &rgb_ug RGB_COLOR_HSB(0,92,49)                  &trans  &kp K_PREVIOUS        &kp K_NEXT            &kp K_PLAY_PAUSE  &to BASE_LAYER
                    &mo BT   &trans   &trans                                          &trans  &trans                &trans

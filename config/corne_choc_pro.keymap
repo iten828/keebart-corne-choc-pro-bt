@@ -197,9 +197,9 @@
         };
 
     // 7. Ergol Shift --
-    //                -- On shifte les touches 1 à 1 plutôt que d’utilser un shift global 
+    //                -- On shifte les touches 1 à 1 plutôt que d’utiliser un shift global. 
     //                -- Ça permet de ne pas avoir shift en modifieur afin d’avoir une
-    //                -- meilleure gestion du shift sur les couches sym et navnum
+    //                -- meilleure gestion du shift sur les couches sym et navnum.
         sergol-layer {
             label = "Shift";
             display-name = "Shift";
@@ -304,7 +304,7 @@
   &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans  &trans  &to EL_LAYER  &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
   S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans  &trans  &kp FR_MINS   &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
   S_MONEY  S_COLON  S_STAR   S_PLUS    S_PRCNT                    &kp FR_COMM   &kp FR_1   &kp FR_2  &kp FR_3  &kp FR_DOT
-  &trans  &sc EL_NUMNAV BACKSPACE  &kp (TAB)  &trans  &lt EL_NUMNAV LS(SPACE)  &EZ_SL(EL_SYM)
+  &mo EL_SNUMNAV  &sc EL_NUMNAV BACKSPACE  &kp (TAB)  &trans  &lt EL_NUMNAV LS(SPACE)  &EZ_SL(EL_SYM)
             >;
         };
 // Common layers -----------------------------------------------------------------------------------------------

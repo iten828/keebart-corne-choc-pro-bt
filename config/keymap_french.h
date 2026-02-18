@@ -20,7 +20,7 @@
 #include <dt-bindings/zmk/hid_usage_pages.h>
 #include <dt-bindings/zmk/modifiers.h>
 #include <dt-bindings/zmk/keys.h>
-
+#include <behaviors.dtsi>
 // clang-format off
 
 /*
@@ -187,6 +187,7 @@
 #define K7 KP_N7
 #define K8 KP_N8
 #define K9 KP_N9
+
 / {
     macros {
         lm: lm {

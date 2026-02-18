@@ -1,5 +1,5 @@
     
-    / {
+/ {
   behaviors {
     // Added for testing
         HRM_RGUI: HRM_RGUI {

@@ -189,16 +189,16 @@
             label = "Ergo-l";
             display-name = "Ergo-l";
             bindings = <
-  &kp FR_Q  &kp FR_C             &kp FR_O               &kp FR_P                 &kp FR_W    &kp C_MUTE  &kp C_PP  &kp FR_J      &kp FR_M                 &kp FR_D                 &sl EL_1DK_LAYER     &kp FR_Y
-  &kp FR_A  &HRM_LGUI LWIN FR_S  &HRM_LCTRL LCTRL FR_E  &HRM_LALT LEFT_ALT FR_N  &kp FR_F    &kp LALT    &kp RALT  &kp FR_L      &HRM_RALT LEFT_ALT FR_R  &HRM_RCTRL RCTRL FR_T    &HRM_RGUI RWIN FR_I  &kp FR_U
-  &kp FR_Z  &kp FR_X             &kp FR_MINS            &kp FR_V                 &kp FR_B                          &kp FR_DOT    &kp FR_H                 &kp FR_G                 &kp FR_COMM          &kp FR_K
-                                 &mo EL_SLAYER          &BCKSPC_NAVNUM EL_NUMNAV BACKSPACE LTHUMB_REACH    RTHUMB_REACH  &SPACE_NAVNUM EL_NUMNAV SPACE   &mo EL_SYM
+  &kp FR_Q  &kp FR_C             &kp FR_O               &kp FR_P                 &kp FR_W    &kp C_MUTE    &kp C_PP  &kp FR_J      &kp FR_M                 &kp FR_D                 &sl EL_1DK_LAYER     &kp FR_Y
+  &kp FR_A  &HRM_LGUI LWIN FR_S  &HRM_LCTRL LCTRL FR_E  &HRM_LALT LEFT_ALT FR_N  &kp FR_F    &kp LALT      &kp RALT  &kp FR_L      &HRM_RALT LEFT_ALT FR_R  &HRM_RCTRL RCTRL FR_T    &HRM_RGUI RWIN FR_I  &kp FR_U
+  &kp FR_Z  &kp FR_X             &kp FR_MINS            &kp FR_V                 &kp FR_B                            &kp FR_DOT    &kp FR_H                 &kp FR_G                 &kp FR_COMM          &kp FR_K
+                                 &mo EL_SLAYER          &BCKSPC_NAVNUM EL_NUMNAV BACKSPACE   LTHUMB_REACH  RTHUMB_REACH            &SPACE_NAVNUM EL_NUMNAV SPACE   &mo EL_SYM
             >;
         };
 
     // 7. Ergol Shift --
-    //                -- On shifte les touches 1 à 1 plutôt que d’utiliser un shift global. 
-    //                -- Ça permet de ne pas avoir shift en modifieur afin d’avoir une
+    //                -- On shifte les touches 1 à 1 plutôt que d’utiliser le modifieur shift global. 
+    //                -- Ça permet d’avoir une
     //                -- meilleure gestion du shift sur les couches sym et navnum.
     //                -- shift/sym ou sym/shift fonctionnent, pour numnav, ça doit fonctionner aussi
     //                -- en ajoutant un mod/tap sur le capslock (EL_SNUMNAV/capslock au lieu de juste capslock)
@@ -206,24 +206,24 @@
             label = "Shift";
             display-name = "Shift";
             bindings = <
-  &kp LS(FR_Q)  &kp LS(FR_C)  &kp LS(FR_O)  &kp LS(FR_P)  &kp LS(FR_W)  &trans      &trans    &kp LS(FR_J)   &kp LS(FR_M)  &kp LS(FR_D)   &kp FR_EXLM   &kp LS(FR_Y)
-  &kp LS(FR_A)  &kp LS(FR_S)  &kp LS(FR_E)  &kp LS(FR_N)  &kp LS(FR_F)  &kp LALT    &kp RALT  &kp LS(FR_L)   &kp LS(FR_R)  &kp LS(FR_T)   &kp LS(FR_I)  &kp LS(FR_U)
-  &kp LS(FR_Z)  &kp LS(FR_X)  &kp FR_QUES   &kp LS(FR_V)  &kp LS(FR_B)                        &kp FR_COLN    &kp LS(FR_H)  &kp LS(FR_G)   &kp FR_SCLN  &kp LS(FR_K)
-                                 &none   &trans  &trans      &trans  &mo EL_SNUMNAV  &mo EL_SSYM
+  &kp LS(FR_Q)  &kp LS(FR_C)  &kp LS(FR_O)  &kp LS(FR_P)  &kp LS(FR_W)  &trans      &trans    &kp LS(FR_J)    &kp LS(FR_M)  &kp LS(FR_D)   &kp FR_EXLM   &kp LS(FR_Y)
+  &kp LS(FR_A)  &kp LS(FR_S)  &kp LS(FR_E)  &kp LS(FR_N)  &kp LS(FR_F)  &kp LALT    &kp RALT  &kp LS(FR_L)    &kp LS(FR_R)  &kp LS(FR_T)   &kp LS(FR_I)  &kp LS(FR_U)
+  &kp LS(FR_Z)  &kp LS(FR_X)  &kp FR_QUES   &kp LS(FR_V)  &kp LS(FR_B)                        &kp FR_COLN     &kp LS(FR_H)  &kp LS(FR_G)   &kp FR_SCLN  &kp LS(FR_K)
+                                            &none        &trans         &trans      &trans    &mo EL_SNUMNAV  &mo EL_SSYM
             >;
         };
  
     // 8. Ergol 1DK layer --
-    //                    -- 
+    //                    --
     //  
         ergol_1dk_layer {
             label = "1dk";
             display-name = "1dk";
             bindings = <
-  &circ FR_A       &kp FR_CCED      &a01xx K5 K6  &circ FR_O            &kp FR_DEG    &trans  &trans  &to EL_LAYER  &kp FR_MICR   &kp FR_UNDS    &kp FR_DIAE      &circ FR_U
-  &kp FR_AGRV      &kp FR_EACU      &kp FR_EGRV   &circ FR_E            &tild FR_N    &trans  &trans  &kp FR_LPRN   &kp FR_RPRN   &circ FR_I     &diae FR_I       &kp FR_UGRV
-  &a1xx K4 K5      &a02xx K2 K3     &a01xx K7 K3  &a01xx K5 K0          &a01xx K5 K1                  &a01xx K3 K3  &https        &to EL_LAYER   &a01xx K8 K3     &a01xx K6 K9
-                                                  &sl EL_S1DK_LAYER     &trans        &trans  &trans  &a01xx K4 K6  &trans
+  &circ FR_A   &kp FR_CCED    &a01xx K5 K6  &circ FR_O    &kp FR_DEG    &trans    &trans  &to EL_LAYER  &kp FR_MICR   &kp FR_UNDS    &kp FR_DIAE      &circ FR_U
+  &kp FR_AGRV  &kp FR_EACU    &kp FR_EGRV   &circ FR_E    &tild FR_N    &trans    &trans  &kp FR_LPRN   &kp FR_RPRN   &circ FR_I     &diae FR_I       &kp FR_UGRV
+  &a1xx K4 K5  &a02xx K2 K3   &a01xx K7 K3  &a01xx K5 K0  &a01xx K5 K1                    &a01xx K3 K3  &https        &to EL_LAYER   &a01xx K8 K3     &a01xx K6 K9
+                                                  &sl EL_S1DK_LAYER     &trans    &trans  &trans        &a01xx K4 K6  &trans
             >;
         };
 
@@ -237,7 +237,7 @@
   &circ LS(FR_A)  &a01xx K9 K9  &a01xx K4 K0    &circ LS(FR_O)  &to EL_LAYER    &trans      &trans  &to EL_LAYER  &to EL_LAYER  &to EL_LAYER    &circ LS(FR_U)   &to EL_LAYER
   &agrv LS(FR_A)  &a1xx K4 K4   &agrv LS(FR_E)  &circ LS(FR_E)  &tild LS(FR_N)  &trans      &trans  &to EL_LAYER  &to EL_LAYER  &circ LS(FR_I)  &diae LS(FR_I)   &agrv LS(FR_U) 
   &a01xx K9 K8    &to EL_LAYER  &to EL_LAYER    &to EL_LAYER    &to EL_LAYER                        &to EL_LAYER  &to EL_LAYER  &to EL_LAYER    &ax K7           &a01xx K7 K4
-                                                    &trans           &trans           &trans      &trans  &trans           &trans
+                                                &trans          &trans          &trans      &trans  &trans         &trans
             >;
         };
         
@@ -250,7 +250,7 @@
             bindings = <
   &kp FR_CIRC &kp FR_LABK &kp FR_RABK &kp FR_DLR  &kp FR_PERC  &trans   &trans   &kp FR_AT   &kp FR_AMPR &kp FR_ASTR &kp FR_QUOT &kp FR_GRV
   &kp FR_LCBR &kp FR_LPRN &kp FR_RPRN &kp FR_RCBR &kp FR_EQL   &trans   &trans   &kp FR_BSLS &kp FR_PLUS &kp FR_MINS &kp FR_SLSH &kp FR_DQUO 
-  &kp FR_TILD &kp FR_LBRC &kp FR_RBRC &kp FR_UNDS &kp FR_HASH                    &kp FR_PIPE &kp FR_EXLM &kp FR_SCLN &kp FR_COLN &kp FR_QUES
+  &a01xx K2 K6 &kp FR_LBRC &kp FR_RBRC &kp FR_UNDS &kp FR_HASH                    &kp FR_PIPE &kp FR_EXLM &kp FR_SCLN &kp FR_COLN &kp FR_QUES
                                     &mo EL_SSYM &trans &trans                    &trans &trans &trans
 
             >;
@@ -263,15 +263,15 @@
             label = "ssym";
             display-name = "ssym";
             bindings = <
-  &none  &none  &none  &none  &a01xx K3 K7  &trans    &trans  &none        &none         &a02xx K1 K5  &none         &none  // ‰,×
-  &none  &none  &none  &none  &none &trans            &trans  &none        &a01xx K7 K7  &a01xx K7 K5  &a02xx K4 K7  &none  // ±,¯,÷
-  &none  &none  &none  &none  &none                           &a2xx K2 K1  &none         &none         &none         &none  // ¦
-                          &trans   &trans   &trans    &trans  &trans       &trans
+  &none        &none  &none  &none  &a01xx K3 K7  &trans    &trans  &none        &none         &a02xx K1 K5  &none         &none  // ‰,×
+  &none        &none  &none  &none  &none &trans            &trans  &none        &a01xx K7 K7  &a01xx K7 K5  &a02xx K4 K7  &none  // ±,¯,÷
+  &kp FR_TILD  &none  &none  &none  &none                           &a2xx K2 K1  &none         &none         &none         &none  // ¦
+                                &trans   &trans   &trans    &trans  &trans       &trans
             >;
         };
 
     // 12. Ergol NumLock --
-    //                 -- 
+    //                   -- 
     //  
         ergol_num_lock_layer {
             display-name = "NumLock";

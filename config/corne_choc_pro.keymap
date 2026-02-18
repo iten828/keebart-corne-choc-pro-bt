@@ -663,7 +663,7 @@
   &trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans        &trans  &trans  &UnS FR_EXLM  &trans
   &trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans        &trans  &trans  &trans        &trans
   &trans  &trans  &UnS FR_QUES   &trans  &trans                      &UnS FR_COLN  &trans  &trans  &UnS FR_SCLN  &trans
-                                 &trans  &trans  &trans      &trans  &insec        &trans
+                                 &trans  &trans  &trans      &trans  &lm ERGOL_SNUMNAV LSHIFT        &mo ERGOL_SSYM
             >;
         };
  
@@ -723,46 +723,6 @@
                 &trans &trans &trans               &trans &trans &trans
             >;
         };
-/*
- case AZ_MULTIP:
-            if (_emul_os_mode == EMUL_OS_OSX) OPTION(XKEY(X_RBRC))
-            else UNMOD(WINALT4(0,2,1,5));
-            break;
-        case AZ_DIVIS:
-            if (_emul_os_mode == EMUL_OS_OSX) OPTION(XKEY(X_RBRC))
-            else UNMOD(WINALT4(0,2,4,7));
-            break;
-         case AZ_MACRON:
-            if (_emul_os_mode == EMUL_OS_OSX) OPTION(XKEY(X_RBRC))
-            else UNMOD(WINALT4(0,1,7,5));
-            break;
-        case AZ_MDOT:
-            if (_emul_os_mode == EMUL_OS_OSX) OPTION(XKEY(X_RBRC))
-            else UNMOD(WINALT4(0,1,8,3));
-            break;
-
-        case AZ_PLUSMOINS:
-            if (_emul_os_mode == EMUL_OS_OSX) OPTION(XKEY(X_RBRC))
-            else UNMOD(WINALT4(0,1,7,7));
-            break;
-
-        case AZ_BBARE:
-            if (_emul_os_mode == EMUL_OS_OSX) OPTION(XKEY(X_RBRC))
-            else UNMOD(WINALT3(2,2,1));
-            break;
-        case AZ_BULLET:
-            switch(_emul_os_mode) {
-                case EMUL_OS_WIN: WINALT1(7); break;                //Win: ALT 7 = •
-         case AZ_ESZET: // lettre allemande ẞ
-            if (_emul_os_mode == EMUL_OS_OSX) OPTION(XKEY(X_RBRC))
-            else UNMOD(WINALT4(0,2,2,3));
-            break;
-
-        case AZ_SESZET: // lettre allemande ß
-            if (_emul_os_mode == EMUL_OS_OSX) OPTION(XKEY(X_RBRC))
-            else UNMOD(WINALT4(7,8,3,8));
-            break;
-*/
 
     // 12. Ergol NumNav --
     //                 -- 
@@ -785,9 +745,9 @@
             label = "snumnav";
             display-name = "sNumNav";
             bindings = <
-  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-  &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans
+  &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans        &trans  &to NUM_LOCK_LAYER     &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
+  X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans        &trans  &kp FR_MINS            &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
+  X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                           &kp FR_COMM            &kp FR_1   &kp FR_2  &kp FR_3  &kp FR_DOT
   &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT)
             >;
         };

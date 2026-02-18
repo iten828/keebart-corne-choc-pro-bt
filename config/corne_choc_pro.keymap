@@ -206,7 +206,7 @@
   &trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans          &trans  &trans  &UnS FR_EXLM  &trans
   &trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans          &trans  &trans  &trans        &trans
   &trans  &trans  &UnS FR_QUES   &trans  &trans                      &UnS FR_COLN    &trans  &trans  &UnS FR_SCLN  &trans
-                                 &trans  &trans  &trans      &trans  &mo EL_SNUMNAV  &mo EL_SSYM
+                                 &none   &trans  &trans      &trans  &mo EL_SNUMNAV  &mo EL_SSYM
             >;
         };
  
@@ -301,9 +301,9 @@
         ergol_num_lock_layer {
             display-name = "NumLock";
             bindings = <
-  &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans  &trans  &to EL_LAYER &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
-  S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans  &trans  S_MINUS        &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
-  S_MONEY  S_COLON  S_STAR   S_PLUS    S_PRCNT                    S_COMMA        &kp FR_1   &kp FR_2  &kp FR_3  &kp FR_DOT
+  &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans  &trans  &to EL_LAYER  &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
+  S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans  &trans  &kp FR_MINS   &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
+  S_MONEY  S_COLON  S_STAR   S_PLUS    S_PRCNT                    &kp FR_COMM   &kp FR_1   &kp FR_2  &kp FR_3  &kp FR_DOT
   &trans  &sc EL_NUMNAV BACKSPACE  &kp (TAB)  &trans  &lt EL_NUMNAV LS(SPACE)  &EZ_SL(EL_SYM)
             >;
         };

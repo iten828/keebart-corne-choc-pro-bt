@@ -16,15 +16,6 @@
 #define NUM_NAV_LAYER   4
 #define NUM_ROW_LAYER   5
 
-#define EL_LAYER         6
-#define EL_SLAYER        7
-#define EL_1DK_LAYER     8
-#define EL_S1DK_LAYER    9
-#define EL_SYM          10
-#define EL_SSYM         11
-#define EL_NUMLOCK      12
-#define EL_NUMNAV       13
-#define EL_SNUMNAV      14
 #define FUNCTION_LAYER  15
 #define BT              16
 // Potentially used by other keymaps deriving from this one, who may add extra layers.

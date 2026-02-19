@@ -190,10 +190,11 @@
             label = "Ergo-l";
             display-name = "Ergo-l";
             bindings = <
-  &kp FR_Q  &kp FR_C             &kp FR_O               &kp FR_P                 &kp FR_W    &kp C_MUTE    &kp C_PP  &kp FR_J      &kp FR_M                 &kp FR_D                 &sl EL_1DK_LAYER     &kp FR_Y
-  &kp FR_A  &HRM_LGUI LWIN FR_S  &HRM_LCTRL LCTRL FR_E  &HRM_LALT LEFT_ALT FR_N  &kp FR_F    &kp LALT      &kp RALT  &kp FR_L      &HRM_RALT LEFT_ALT FR_R  &HRM_RCTRL RCTRL FR_T    &HRM_RGUI RWIN FR_I  &kp FR_U
-  &kp FR_Z  &kp FR_X             &kp FR_MINS            &kp FR_V                 &kp FR_B                            &kp FR_DOT    &kp FR_H                 &kp FR_G                 &kp FR_COMM          &kp FR_K
-                                 &mo EL_SLAYER          &BCKSPC_NAVNUM EL_NUMNAV BACKSPACE   LTHUMB_REACH  RTHUMB_REACH            &SPACE_NAVNUM EL_NUMNAV SPACE   &mo EL_SYM
+  &kp FR_Q  &kp FR_C        &kp FR_O         &kp FR_P        &kp FR_W  &kp C_MUTE    &kp C_PP  &kp FR_J    &kp FR_M            &kp FR_D         &sl EL_1DK_LAYER  &kp FR_Y
+  &HRM_A    &HRM_S          &HRM_E           &HRM_N          &kp FR_F  &kp LALT      &kp RALT  &kp FR_L    &HRM_R              &HRM_T           &HRM_I            &kp FR_U
+  &kp FR_Z  &kp FR_X        &kp FR_MINS      &kp FR_V        &kp FR_B                          &kp FR_DOT  &kp FR_H            &kp FR_G         &kp FR_COMM       &kp FR_K
+ //                           &mo EL_SLAYER    &BCKSPC_NAVNUM EL_NUMNAV BACKSPACE   LTHUMB_REACH  RTHUMB_REACH            &SPACE_NAVNUM EL_NUMNAV SPACE   &mo EL_SYM
+                            EL_LTHUMB_TUCK  EL_LTHUMB_HOME  EL_LTHUMB_REACH    EL_RTHUMB_REACH  EL_RTHUMB_HOME EL_RTHUMB_TUCK
             >;
         };
 
@@ -205,7 +206,7 @@
     //                -- en ajoutant un mod/tap sur le capslock (EL_SNUMNAV/capslock au lieu de juste capslock)
     //                -- Note: attention, est-ce que le fait de ne plus avoir accès au modifieur shift global
     //                -- ne risque pas de poser des problèmes en cas d’utilisation de shift dans un raccourci clavier ?
-    //                -- (je n’ai pas d’exemple en tête, mais cela pourrait être le cas)
+    //                -- (je n’ai pas d’exemple en tête, mais cela pourrait être le cas…). Dans ce cas, ajouter shift en HRM serait une solution.
         sergol-layer {
             label = "Shift";
             display-name = "Shift";
@@ -255,8 +256,8 @@
   &a0xx K9 K4   &kp FR_LABK &kp FR_RABK &kp FR_DLR  &kp FR_PERC  &trans   &trans   &kp FR_AT   &kp FR_AMPR &kp FR_ASTR &kp FR_QUOT &kp FR_GRV
   &kp FR_LCBR  &kp FR_LPRN &kp FR_RPRN &kp FR_RCBR &kp FR_EQL   &trans   &trans   &kp FR_BSLS &kp FR_PLUS &kp FR_MINS &kp FR_SLSH &kp FR_DQUO 
   &a01xx K2 K6 &kp FR_LBRC &kp FR_RBRC &kp FR_UNDS &kp FR_HASH                    &kp FR_PIPE &kp FR_EXLM &kp FR_SCLN &kp FR_COLN &kp FR_QUES
-                                  &mo EL_SSYM    &trans &trans                    &trans &trans &trans
-
+//                                  &mo EL_SSYM    &trans &trans                    &trans &trans &trans
+                                                EL_SYM_NUM_LAYER  &kp SPACE  &kp ENTER     &trans  &kp RALT  &trans
             >;
         };
 
@@ -283,7 +284,8 @@
   &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans  &trans  &to EL_LAYER  &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
   S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans  &trans  &kp FR_MINS   &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
   S_MONEY  S_COLON  S_STAR   S_PLUS    S_PRCNT                    &kp FR_COMM   &kp FR_1   &kp FR_2  &kp FR_3  &kp FR_DOT
-  &mo EL_SNUMNAV  &sc EL_NUMNAV BACKSPACE  &kp (TAB)  &trans  &lt EL_NUMNAV LS(SPACE)  &EZ_SL(EL_SYM)
+//  &mo EL_SNUMNAV  &sc EL_NUMNAV BACKSPACE  &kp (TAB)  &trans  &lt EL_NUMNAV LS(SPACE)  &EZ_SL(EL_SYM)
+   &trans  &sc EL_NUM_NAV_LAYER BACKSPACE  &kp (TAB)  &trans  &lt EL_NUM_NAV_LAYER LS(SPACE)  &EZ_SL(EL_SYMBOLS_LAYER)
             >;
         };
 
@@ -323,10 +325,10 @@
             label = "Functions";
             display-name = "Functions";
             bindings = <
-  &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &none  &none  &to EL_LAYER    &kp C_PREV  &kp C_VOL_UP      &kp C_BRI_UP         &kp SLCK 
-  &kp F5  &kp F6   &kp F7   &kp F8   &rgb_ug RGB_EFF                 &none  &none  &trans  &hrm    LALT C_PP   &hrm RCTL C_MUTE  &hrm RGUI C_AL_LOCK  &hrm LSHIFT PSCRN
-  &kp F9  &kp F10  &kp F11  &kp F12  &rgb_ug RGB_COLOR_HSB(0,92,49)                &to BASE_LAYER  &kp C_NEXT  &kp C_VOL_DN      &kp C_BRI_DN         &kp INS
-                   &mo BT   &trans   &trans                                        &trans  &trans                &trans
+  &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &none  &none  &to EL_LAYER             &kp C_PREV  &kp C_VOL_UP      &kp C_BRI_UP         &kp SLCK 
+  &kp F5  &kp F6   &kp F7   &kp F8   &rgb_ug RGB_EFF                 &none  &none  &trans  &hrm LALT C_PP   &hrm RCTL C_MUTE  &hrm RGUI C_AL_LOCK  &hrm LSHIFT PSCRN
+  &kp F9  &kp F10  &kp F11  &kp F12  &rgb_ug RGB_COLOR_HSB(0,92,49)                &to BASE_LAYER           &kp C_NEXT  &kp C_VOL_DN      &kp C_BRI_DN         &kp INS
+                   &mo BT   &trans   &trans                                        &trans  &trans &trans
             >;
         };
     // 16. BlueTooth layer -- 

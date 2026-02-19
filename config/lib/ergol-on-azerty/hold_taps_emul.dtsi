@@ -2,14 +2,14 @@
 #include <dt-bindings/zmk/keys.h>
 
 // clang-format off
-#define EL_LAYER         6
-#define EL_SLAYER        7
-#define EL_1DK_LAYER     8
-#define EL_S1DK_LAYER    9
-#define EL_SYMBOLS_LAYER  10
-#define EL_SSYMBOLS_LAYER 11
-#define EL_VIM_NAV_LAYER  12
-#define EL_NUM_LOCK_LAYER 13
+#define EL_LAYER           6
+#define EL_SLAYER          7
+#define EL_1DK_LAYER       8
+#define EL_S1DK_LAYER      9
+#define EL_NUM_LOCK_LAYER 10
+#define EL_SYMBOLS_LAYER  11
+#define EL_SSYMBOLS_LAYER 12
+#define EL_VIM_NAV_LAYER  13
 #define EL_NUM_NAV_LAYER  14
 #define EL_SNUM_NAV_LAYER 15
 #define EL_NUM_ROW_LAYER  16

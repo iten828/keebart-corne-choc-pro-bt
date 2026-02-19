@@ -195,6 +195,7 @@
 
   EL_1dk: EL_1dk {
             compatible = "zmk,behavior-sticky-layer";
+            #binding-cells = <0>;
             release-after-ms = <0>;
         };
 

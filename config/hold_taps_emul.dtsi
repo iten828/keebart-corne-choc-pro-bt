@@ -111,21 +111,21 @@
   behaviors {
 
     // mod-morphs to restore Shift+Space and Ctrl+Backspace for certain keymaps
-    EL_magic_backspace: magic_backspace {
+    EL_magic_backspace: EL_magic_backspace {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
       bindings = <&sc EL_NAV_LAYER BACKSPACE>, <&lt EL_NAV_LAYER SPACE>;
       mods      = <MOD_LSFT>;
       keep-mods = <MOD_LSFT>;
     };
-    EL_Emagic_space: magic_space {
+    EL_Emagic_space: EL_magic_space {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
       bindings = <&lt EL_NAV_LAYER SPACE>, <&sc EL_NAV_LAYER BACKSPACE>;
       mods      = <MOD_LCTL>;
       keep-mods = <MOD_LCTL>;
     };
-    EL_magic_backspace_34_keys: magic_backspace_34_keys {
+    EL_magic_backspace_34_keys: EL_magic_backspace_34_keys {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
       bindings = <&sc EL_HRM_LAYER BACKSPACE>, <&lt EL_HRM_LAYER SPACE>;

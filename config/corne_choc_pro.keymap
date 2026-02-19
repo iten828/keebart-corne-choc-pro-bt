@@ -166,7 +166,7 @@
   &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans        &trans  &to NUM_LOCK_LAYER S_N7  S_N8  S_N9  S_FSLH
   X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans        &trans  S_MINUS            S_N4  S_N5  S_N6  S_N0
   X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                           S_COMMA            S_N1  S_N2  S_N3  S_DOT
-           &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT)
+    &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE  &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT)
       >;
     };
 
@@ -295,7 +295,7 @@
             label = "ergol-NumNav";
             display-name = "NumNav";
             bindings = <
-  &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans            &trans  &to EL_NUMLOCK         &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
+  &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans            &trans  &to EL_NUM_LOCK_LAYER      &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
   X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans            &trans  &kp FR_MINS            &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
   X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                               &kp FR_COMM            &kp FR_1   &kp FR_2  &kp FR_3  &kp FR_DOT
       &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT) // ajouter un modtap capslock/snumnav pour pouvoir faire shift depuis la NumNav ?

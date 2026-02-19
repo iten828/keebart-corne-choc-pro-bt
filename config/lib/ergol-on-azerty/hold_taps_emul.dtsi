@@ -140,14 +140,13 @@
       bindings = <&sc EL_HRM_LAYER BACKSPACE>, <&lt EL_HRM_LAYER SPACE>;
       mods      = <MOD_LSFT>;
       keep-mods = <MOD_LSFT>;
-    };
-    /*
-    EL_1dk: EL_1dk {
+    };  
+    EL_odk: EL_odk {
       compatible = "zmk,behavior-sticky-layer";
       #binding-cells = <1>;
       release-after-ms = <0>;
     };
-    */
+  
   };
 
   // XXX this whole AltGr section should probably be inside the `behaviors` branch

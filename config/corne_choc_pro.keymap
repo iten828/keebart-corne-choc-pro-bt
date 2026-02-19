@@ -25,6 +25,7 @@
 // #define HT_NONE
 // #define HT_THUMB_TAPS
 #define HT_HOME_ROW_MODS  // (default behavior)
+// #define HT_TWO_THUMB_KEYS
 
 // Timing is key! Keep the default value if unsure.
 // This defines how long (in ms) a hold-tap key with the "tap-preferred" flavor
@@ -44,8 +45,8 @@
 // When tapping then holding the same tap-hold, if the delay between the two
 // key presses is lower than `QUICK_TAP`, the tap-hold will hold the tap action
 // instead of the hold action. Again, keep the default value if unsure.
-#define QUICK_TAP 200
 
+#define QUICK_TAP 200
 
 // For more information on how hold-taps operate, feel free to read ZMK’s docs:
 // https://zmk.dev/docs/keymaps/behaviors/hold-tap

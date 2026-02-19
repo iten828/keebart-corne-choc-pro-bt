@@ -141,7 +141,7 @@
       mods      = <MOD_LSFT>;
       keep-mods = <MOD_LSFT>;
     };  
-    osl2: sticky_key_no_timeout {
+    osl2: osl2 {
         compatible = "zmk,behavior-sticky-layer";
         #binding-cells = <1>;
         release-after-ms = <0>;

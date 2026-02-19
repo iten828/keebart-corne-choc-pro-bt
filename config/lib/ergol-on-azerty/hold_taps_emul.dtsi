@@ -139,11 +139,13 @@
       mods      = <MOD_LSFT>;
       keep-mods = <MOD_LSFT>;
     };
+    /*
     EL_1dk: EL_1dk {
       compatible = "zmk,behavior-sticky-layer";
       #binding-cells = <1>;
       release-after-ms = <0>;
     };
+    */
   };
 
   // XXX this whole AltGr section should probably be inside the `behaviors` branch

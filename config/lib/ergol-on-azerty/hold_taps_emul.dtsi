@@ -146,7 +146,6 @@
         #binding-cells = <1>;
         release-after-ms = <0>;
       };
-    }; 
   };
 
   // XXX this whole AltGr section should probably be inside the `behaviors` branch

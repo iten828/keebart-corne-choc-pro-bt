@@ -203,6 +203,9 @@
     //                -- meilleure gestion du shift sur les couches sym et navnum.
     //                -- shift/sym ou sym/shift fonctionnent, pour numnav, ça doit fonctionner aussi
     //                -- en ajoutant un mod/tap sur le capslock (EL_SNUMNAV/capslock au lieu de juste capslock)
+    //                -- Note: attention, est-ce que le fait de ne plus avoir accès au modifieur shift global
+    //                -- ne risque pas de poser des problèmes en cas d’utilisation de shift dans un raccourci clavier ?
+    //                -- (je n’ai pas d’exemple en tête, mais cela pourrait être le cas)
         sergol-layer {
             label = "Shift";
             display-name = "Shift";
@@ -266,7 +269,7 @@
             bindings = <
   &kp FR_CIRC  &none  &none  &none  &a01xx K3 K7  &trans    &trans  &none        &none         &a02xx K1 K5  &none         &none  // ‰,×
   &none        &none  &none  &none  &none &trans            &trans  &none        &a01xx K7 K7  &a01xx K7 K5  &a02xx K4 K7  &none  // ±,¯,÷
-  &kp FR_TILD  &none  &none  &none  &none                           &a2xx K2 K1  &none         &none         &none         &none  // ¦
+  &kp FR_TILD  &none  &none  &none  &none                           &a2xx K2 K1  &a01xx K1 K2  &none         &kp FR_COLN   &none  // ¦,¬,:
                                 &trans   &trans   &trans    &trans  &trans       &trans
             >;
         };
@@ -320,10 +323,10 @@
             label = "Functions";
             display-name = "Functions";
             bindings = <
-  &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &trans  &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans            &to EL_LAYER
-  &kp F5  &kp F6   &kp F7   &kp F8   &rgb_ug RGB_EFF                 &trans  &trans  &trans  &kp K_VOLUME_DOWN     &kp K_VOLUME_UP       &kp K_MUTE        &trans
-  &kp F9  &kp F10  &kp F11  &kp F12  &rgb_ug RGB_COLOR_HSB(0,92,49)                  &trans  &kp K_PREVIOUS        &kp K_NEXT            &kp K_PLAY_PAUSE  &to BASE_LAYER
-                   &mo BT   &trans   &trans                                          &trans  &trans                &trans
+  &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &none  &none  &to EL_LAYER    &kp C_PREV  &kp C_VOL_UP      &kp C_BRI_UP         &kp SLCK 
+  &kp F5  &kp F6   &kp F7   &kp F8   &rgb_ug RGB_EFF                 &none  &none  &trans  &hrm    LALT C_PP   &hrm RCTL C_MUTE  &hrm RGUI C_AL_LOCK  &hrm LSHIFT PSCRN
+  &kp F9  &kp F10  &kp F11  &kp F12  &rgb_ug RGB_COLOR_HSB(0,92,49)                &to BASE_LAYER  &kp C_NEXT  &kp C_VOL_DN      &kp C_BRI_DN         &kp INS
+                   &mo BT   &trans   &trans                                        &trans  &trans                &trans
             >;
         };
     // 16. BlueTooth layer -- 

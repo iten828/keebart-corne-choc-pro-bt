@@ -189,6 +189,11 @@
       wait-ms = <0>;
       bindings = <&macro_param_1to1>, <&macro_tap &sl MACRO_PLACEHOLDER>;
     };
+        osl2: osl2 {
+        compatible = "zmk,behavior-sticky-layer";
+        #binding-cells = <1>;
+        release-after-ms = <0>;
+      };
     bsl: better_sticky_layer {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;

@@ -16,8 +16,8 @@
 #define NUM_NAV_LAYER   4
 #define NUM_ROW_LAYER   5
 
-#define FUNCTION_LAYER  15
-#define BT              16
+#define FUNCTION_LAYER  17
+#define BT              18
 // Potentially used by other keymaps deriving from this one, who may add extra layers.
 // Make sure this stays equal to <index_of_last_layer> + 1
 #define EXTRA_LAYERS_START_INDEX 17

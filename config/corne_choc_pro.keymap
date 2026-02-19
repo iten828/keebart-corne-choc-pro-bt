@@ -252,7 +252,7 @@
             label = "sym";
             display-name = "sym";
             bindings = <
-  &a0xx K9 K4   &kp FR_LABK &kp FR_RABK &kp FR_DLR  &kp FR_PERC  &trans   &trans   &kp FR_AT   &kp FR_AMPR &kp FR_ASTR &kp FR_QUOT &kp FR_GRV
+  &a0xx K9 K4  &kp FR_LABK &kp FR_RABK &kp FR_DLR  &kp FR_PERC  &trans   &trans   &kp FR_AT   &kp FR_AMPR &kp FR_ASTR &kp FR_QUOT &kp FR_GRV
   &kp FR_LCBR  &kp FR_LPRN &kp FR_RPRN &kp FR_RCBR &kp FR_EQL   &trans   &trans   &kp FR_BSLS &kp FR_PLUS &kp FR_MINS &kp FR_SLSH &kp FR_DQUO 
   &a01xx K2 K6 &kp FR_LBRC &kp FR_RBRC &kp FR_UNDS &kp FR_HASH                    &kp FR_PIPE &kp FR_EXLM &kp FR_SCLN &kp FR_COLN &kp FR_QUES
 //                                  &mo EL_SSYM    &trans &trans                    &trans &trans &trans
@@ -274,7 +274,20 @@
             >;
         };
 
-    // 12. Ergol NumLock --
+    // 12. VimNav layer -- HJKL arrow cluster on the right hand
+    //                 -- best used along with the NumRow layer
+    //                 -- keyboard shortcuts on the left hand are adjusted to the OS layout (Ergol here)
+        vim_nav_layer {
+             display-name = "VimNav";
+             bindings = <
+  &kp CAPS X_CLOSE  X_PREV   X_NEXT    &none  &trans        &trans  &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp DEL 
+  X_ALL    X_SAVE   X_SHTAB  &kp TAB   &none  &trans        &trans  &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
+  X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                       &none    &none     &none     &none     &none
+  &kp CAPSLOCK  &lt FUNCTION_LAYER DEL  &mo EL_NUM_ROW_LAYER   &trans   &mo FUNCTION_LAYER  &EZ_LSK(RALT)
+      >;
+    };
+
+    // 13. Ergol NumLock --
     //                   -- 
     //  
         ergol_num_lock_layer {
@@ -288,7 +301,7 @@
             >;
         };
 
-    // 13. Ergol NumNav --
+    // 14. Ergol NumNav --
     //                  -- 
     //  
         ergol_numnav_layer {
@@ -302,7 +315,7 @@
             >;
         };
 
-    // 14. Ergol Shift NumNav -- 
+    // 15. Ergol Shift NumNav -- 
     //                        --
         sergol_numnav_layer {
             label = "snumnav";
@@ -315,9 +328,20 @@
             >;
         };
 
-
+    // 16. NumRow layer -- bring the numbers to the homerow, keep shift+numbers for shortcuts and symbols
+    //                 -- space becomes shift+space, which is a no-break space with some OS layouts (e.g. Ergol)
+    //                 -- best used along with the VimNav layer
+    num_row_layer {
+      display-name = "NumRow";
+      bindings = <
+  &kp FR_EXLM  &kp FR_AT  &kp FR_HASH  &kp FR_DLR  &kp FR_PERC  &trans    &trans  &a0xx K9 K4  &kp FR_AMPR  &kp FR_ASTR  &kp FR_LPRN  &kp FR_RPRN 
+  &kp FR_1     &kp FR_2   &kp FR_3     &kp FR_4    &kp FR_5     &trans    &trans  &kp FR_6     &kp FR_7     &kp FR_8    &kp FR_9     &kp FR_0
+  &none        &none      &none        &none       &none                          &kp FR_MINS  &kp FR_COMM  &kp FR_DOT  &kp FR_COLN  &kp FR_SLSH
+                                                &trans  insec &trans        &trans  insec &kp RALT
+            >;
+        };
 // Common layers -----------------------------------------------------------------------------------------------
-    // 15. Functions layer --
+    // 17. Functions layer --
     //                    -- 
     //                    -- 
         Functions {
@@ -330,7 +354,7 @@
                    &mo BT   &trans   &trans                                        &trans  &trans &trans
             >;
         };
-    // 16. BlueTooth layer -- 
+    // 18. BlueTooth layer -- 
     //                    -- 
     //                    -- 
         BT {

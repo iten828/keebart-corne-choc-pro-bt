@@ -81,11 +81,13 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
-#include "aliases.h"       // defines symbols and actions
-#include "hold_taps.dtsi"  // defines thumb keys and homerow mods
 
-#include "hold_taps_emul.dtsi"  // defines thumb keys and homerow mods for ergo-l emulation over windows azerty
-#include "keymap_french.h"      // defines keys for ergo-l emulation over windows azerty
+#include "lib/selenium/aliases.h"       // defines symbols and actions
+#include "lib/selenium/hold_taps.dtsi"  // defines thumb keys and homerow mods
+
+#include "lib/ergol-on-azerty/keymap_french.h"      // defines keys and macro for ergo-l emulation over windows azerty
+#include "lib/ergol-on-azerty/hold_taps_emul.dtsi"  // defines selenium thumb keys and hrm for ergo-l emulation over windows azerty
+
 
 
 / {

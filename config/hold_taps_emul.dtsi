@@ -88,14 +88,14 @@
   #define EL_RTHUMB_HOME   &kp SPACE
   #define EL_RTHUMB_TUCK   &mo EL_SYMBOLS_LAYER
 #elifdef HT_THUMB_TAPS
-  #define EL_LTHUMB_TUCK   &EL_EZ_SL(EL_SLAYER)
+  #define EL_LTHUMB_TUCK   &EZ_SL(EL_SLAYER)
   #define EL_LTHUMB_HOME   EL_LTHUMB_TT
   #define EL_LTHUMB_REACH  &mt LGUI REACH_TAP
   #define EL_RTHUMB_REACH  &mt LALT ENTER
   #define EL_RTHUMB_HOME   EL_RTHUMB_TT
   #define EL_RTHUMB_TUCK   &EL_sym_shift_altgr
 #elifdef HT_HOME_ROW_MODS
-  #define EL_LTHUMB_TUCK   &EL_EZ_SL(EL_SLAYER)
+  #define EL_LTHUMB_TUCK   &EZ_SL(EL_SLAYER)
   #define EL_LTHUMB_HOME   EL_LTHUMB_HRM
   #define EL_LTHUMB_REACH  &sc EL_HRM_LAYER REACH_TAP
   #define EL_RTHUMB_REACH  &sc EL_HRM_LAYER ENTER
@@ -110,7 +110,9 @@
   #define EL_RTHUMB_TUCK   EL_RTHUMB_REACH
 #endif
 
-#define EL_EZ_LSK(mod)   lbsk (mod) (mod)
+//#define EZ_SL(layer)  bsl (layer) (layer)
+//#define EZ_SK(mod)    bsk (mod) (mod)
+//#define EL_EZ_LSK(mod)   lbsk (mod) (mod)
 
 / {
   behaviors {

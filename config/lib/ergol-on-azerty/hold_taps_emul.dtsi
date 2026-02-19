@@ -141,7 +141,14 @@
       mods      = <MOD_LSFT>;
       keep-mods = <MOD_LSFT>;
     };  
-     
+    osl2: one_shot_layer {
+      compatible = "zmk,behavior-macro-one-param";
+      #binding-cells = <1>;
+      tap-ms = <0>;
+      wait-ms = <0>;
+      release-after-ms = <0>;
+      bindings = <&macro_param_1to1>, <&macro_tap &sl MACRO_PLACEHOLDER>;
+    }; 
   };
 
   // XXX this whole AltGr section should probably be inside the `behaviors` branch

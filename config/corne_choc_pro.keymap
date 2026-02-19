@@ -191,13 +191,13 @@
             label = "Ergo-l";
             display-name = "Ergo-l";
             bindings = <
-  &kp FR_Q  &kp FR_C  &kp FR_O     &kp FR_P  &kp FR_W  &kp C_MUTE    &kp C_PP  &kp FR_J    &kp FR_M   &kp FR_D  &sl EL_1DK_LAYER  &kp FR_Y
+  &kp FR_Q  &kp FR_C  &kp FR_O     &kp FR_P  &kp FR_W  &kp C_MUTE    &kp C_PP  &kp FR_J    &kp FR_M   &kp FR_D  &EL_1dk EL_1DK_LAYER  &kp FR_Y
   HRM_FR_A  HRM_S     HRM_E        HRM_N     &kp FR_F  &kp LALT      &kp RALT  &kp FR_L    HRM_R      HRM_T     HRM_I             &kp FR_U
   &kp FR_Z  &kp FR_X  &kp FR_MINS  &kp FR_V  &kp FR_B                          &kp FR_DOT  &kp FR_H   &kp FR_G  &kp FR_COMM       &kp FR_K
                             EL_LTHUMB_TUCK  EL_LTHUMB_HOME  EL_LTHUMB_REACH    EL_RTHUMB_REACH  EL_RTHUMB_HOME EL_RTHUMB_TUCK
             >;
         };
-        
+
     // 7. Ergol Shift --
     //                -- On shifte les touches 1 à 1 plutôt que d’utiliser le modifieur shift global. 
     //                -- Ça permet d’avoir une
@@ -214,7 +214,8 @@
   &kp LS(FR_Q)  &kp LS(FR_C)  &kp LS(FR_O)  &kp LS(FR_P)  &kp LS(FR_W)  &trans      &trans    &kp LS(FR_J)    &kp LS(FR_M)  &kp LS(FR_D)   &kp FR_EXLM   &kp LS(FR_Y)
   &kp LS(FR_A)  &kp LS(FR_S)  &kp LS(FR_E)  &kp LS(FR_N)  &kp LS(FR_F)  &kp LALT    &kp RALT  &kp LS(FR_L)    &kp LS(FR_R)  &kp LS(FR_T)   &kp LS(FR_I)  &kp LS(FR_U)
   &kp LS(FR_Z)  &kp LS(FR_X)  &kp FR_QUES   &kp LS(FR_V)  &kp LS(FR_B)                        &kp FR_COLN     &kp LS(FR_H)  &kp LS(FR_G)   &kp FR_SCLN   &kp LS(FR_K)
-                                            &none        &trans         &trans      &trans    &mo EL_SNUM_NAV_LAYER  &mo EL_SSYMBOLS_LAYER 
+                                                  &none  &none  &none                         EL_RTHUMB_REACH  EL_SHIFTED_RTHUMB_HOME  EL_SHIFED_RTHUMB_TUCK
+//                                            &none        &trans         &trans      &trans    &mo EL_SNUM_NAV_LAYER  &mo EL_SSYMBOLS_LAYER 
             >;
         };
  

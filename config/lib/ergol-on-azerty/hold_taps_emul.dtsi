@@ -65,6 +65,8 @@
   #define EL_RTHUMB_HRM &EL_magic_backspace
   #define EL_LTHUMB_S34 &lt EL_NAV_LAYER SPACE
   #define EL_RTHUMB_S34 &EL_magic_backspace_34_keys
+  #define EL_SHIFTED_LTHUMB_HRM &lt EL_SNUM_NAV_LAYER SPACE
+  #define EL_SHIFTED_RTHUMB_HRM &sc EL_SNUM_NAV_LAYER BACKSPACE
 #else
   #define EL_LTHUMB_TT  &mt LCTL BACKSPACE
   #define EL_RTHUMB_TT  &EL_magic_space
@@ -72,6 +74,8 @@
   #define EL_RTHUMB_HRM &lt EL_NAV_LAYER SPACE
   #define EL_LTHUMB_S34 &sc EL_NAV_LAYER BACKSPACE
   #define EL_RTHUMB_S34 &lt EL_S34_LAYER SPACE
+  #define EL_SHIFTED_LTHUMB_HRM &sc EL_SNUM_NAV_LAYER BACKSPACE
+  #define EL_SHIFTED_RTHUMB_HRM &lt EL_SNUM_NAV_LAYER SPACE
 #endif
 
 #ifdef HT_NONE
@@ -95,6 +99,8 @@
   #define EL_RTHUMB_REACH  &sc EL_HRM_LAYER ENTER
   #define EL_RTHUMB_HOME   EL_RTHUMB_HRM
   #define EL_RTHUMB_TUCK   &EL_sym_shift_altgr
+  #define EL_SHIFTED_RTHUMB_HOME  EL_SHIFTED_RTHUMB_HRM
+  #define EL_SHIFED_RTHUMB_TUCK   EL_SHIFTED_RTHUMB_HRM
 #elifdef HT_TWO_THUMB_KEYS
   #define EL_LTHUMB_TUCK   &mt LSHIFT REACH_TAP
   #define EL_LTHUMB_HOME   EL_LTHUMB_S34
@@ -186,4 +192,11 @@
     flavor = "tap-preferred";
     bindings = <&EL_lkp>, <&EL_losm>;
   };
+
+  EL_1dk: EL_1dk {
+            compatible = "zmk,behavior-sticky-layer";
+            release-after-ms = <0>;
+        };
+
+
 };

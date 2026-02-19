@@ -250,7 +250,7 @@
     //  
         ergol_sym_layer {
             label = "sym";
-            display-name = "sym";
+            display-name = "Sym";
             bindings = <
   &a0xx K9 K4  &kp FR_LABK &kp FR_RABK &kp FR_DLR  &kp FR_PERC  &trans   &trans   &kp FR_AT   &kp FR_AMPR &kp FR_ASTR &kp FR_QUOT &kp FR_GRV
   &kp FR_LCBR  &kp FR_LPRN &kp FR_RPRN &kp FR_RCBR &kp FR_EQL   &trans   &trans   &kp FR_BSLS &kp FR_PLUS &kp FR_MINS &kp FR_SLSH &kp FR_DQUO 
@@ -265,7 +265,7 @@
 
         sergol_sym_layer {
             label = "ssym";
-            display-name = "ssym";
+            display-name = "ShfSym";
             bindings = <
   &kp FR_CIRC  &none  &none  &none  &a01xx K3 K7  &trans    &trans  &none        &none         &a02xx K1 K5  &none         &none  // ‰,×
   &none        &none  &none  &none  &none &trans            &trans  &none        &a01xx K7 K7  &a01xx K7 K5  &a02xx K4 K7  &none  // ±,¯,÷
@@ -277,7 +277,7 @@
     // 12. VimNav layer -- HJKL arrow cluster on the right hand
     //                 -- best used along with the NumRow layer
     //                 -- keyboard shortcuts on the left hand are adjusted to the OS layout (Ergol here)
-        vim_nav_layer {
+        ergol_vim_nav_layer {
              display-name = "VimNav";
              bindings = <
   &kp CAPS X_CLOSE  X_PREV   X_NEXT    &none  &trans        &trans  &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp DEL 
@@ -328,10 +328,9 @@
             >;
         };
 
-    // 16. NumRow layer -- bring the numbers to the homerow, keep shift+numbers for shortcuts and symbols
-    //                 -- space becomes shift+space, which is a no-break space with some OS layouts (e.g. Ergol)
-    //                 -- best used along with the VimNav layer
-    num_row_layer {
+    // 16. NumRow layer -- 
+    //                  --  
+    ergol_num_row_layer {
       display-name = "NumRow";
       bindings = <
   &kp FR_EXLM  &kp FR_AT  &kp FR_HASH  &kp FR_DLR  &kp FR_PERC  &trans    &trans  &a0xx K9 K4  &kp FR_AMPR  &kp FR_ASTR  &kp FR_LPRN  &kp FR_RPRN 

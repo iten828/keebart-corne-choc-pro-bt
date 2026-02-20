@@ -82,11 +82,17 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
+// Selenium from https://github.com/Nuclear-Squid/zmk-keyboard-quacken/tree/main
 #include "lib/selenium/aliases.h"       // defines symbols and actions
 #include "lib/selenium/hold_taps.dtsi"  // defines thumb keys and homerow mods
 
-#include "lib/ergol-on-azerty/keymap_french.h"      // defines keys and macro for ergo-l emulation over windows azerty
-#include "lib/ergol-on-azerty/hold_taps_emul.dtsi"  // defines selenium thumb keys and hrm for ergo-l emulation over windows azerty
+ // Defines keys and macro for ergo-l emulation over windows azerty
+ // copy of https://github.com/parinacota/dragon46_zmk/tree/main from Parinacota
+#include "lib/ergol-on-azerty/keymap_french.h" 
+ // Defines selenium thumb keys and hrm for ergo-l emulation over windows azerty
+ // Based on Selenium from https://github.com/Nuclear-Squid/zmk-keyboard-quacken/tree/main
+ // Works for non-vi HRM, others conf are not tested and stil need some work. 
+#include "lib/ergol-on-azerty/hold_taps_emul.dtsi" 
 
 
 
@@ -191,9 +197,9 @@
             label = "Ergo-l";
             display-name = "Ergo-l";
             bindings = <
-  &kp FR_Q  &kp FR_C  &kp FR_O     &kp FR_P  &kp FR_W  &kp C_MUTE    &kp C_PP  &kp FR_J    &kp FR_M   &kp FR_D  &osl2 EL_1DK_LAYER  &kp FR_Y
-  HRM_FR_A  HRM_S     HRM_E        HRM_N     &kp FR_F  &kp LALT      &kp RALT  &kp FR_L    HRM_R      HRM_T     HRM_I               &kp FR_U
-  &kp FR_Z  &kp FR_X  &kp FR_MINS  &kp FR_V  &kp FR_B                          &kp FR_DOT  &kp FR_H   &kp FR_G  &kp FR_COMM         &kp FR_K
+  &kp FR_Q  &kp FR_C  &kp FR_O     &kp FR_P  &kp FR_W  &kp C_MUTE    &kp C_PP  &kp FR_J    &kp FR_M   &kp FR_D  &sl EL_1DK_LAYER  &kp FR_Y
+  HRM_FR_A  HRM_S     HRM_E        HRM_N     &kp FR_F  &kp LALT      &kp RALT  &kp FR_L    HRM_R      HRM_T     HRM_I             &kp FR_U
+  &kp FR_Z  &kp FR_X  &kp FR_MINS  &kp FR_V  &kp FR_B                          &kp FR_DOT  &kp FR_H   &kp FR_G  &kp FR_COMM       &kp FR_K
                             EL_LTHUMB_TUCK  EL_LTHUMB_HOME  EL_LTHUMB_REACH    EL_RTHUMB_REACH  EL_RTHUMB_HOME EL_RTHUMB_TUCK
             >;
         };

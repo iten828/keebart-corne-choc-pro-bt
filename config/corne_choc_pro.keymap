@@ -95,7 +95,7 @@
 #include "lib/ergol-on-azerty/hold_taps_emul.dtsi" 
 
 
-
+4
 / {
     chosen { 
         zmk,physical-layout = &five_col_layout; 
@@ -110,13 +110,7 @@
     //               -- the Space Cadet layer-tap on the right can be replaced by an AltGr/Enter mod-tap
     //               -- adjust the homerow mods with the #define statements above
         default_layer {
-            display-name = "QWERTY";
-
-            // ------------------------------------------------------------------------------
-            // |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP   |  Y  |  U   |  I  |  O  |  P  |
-            // |  A  |  S  |  D  |  F  |  G  |  LALT |  RALT |  H  |  J   |  K  |  L  |  ;  |
-            // |  Z  |  X  |  C  |  V  |  B  |               |  N  |  M   |  ,  |  .  |  /  |
-            //             | GUI | LWR | SPC |               | ENT | RSE  | ALT |
+            display-name = "Qwerty";
 
             bindings = <
   &kp Q  &kp W  &kp E  &kp R  &kp T  &kp C_MUTE  &kp C_PP  &kp Y  &kp U  &kp I       &kp O    &kp P
@@ -190,6 +184,8 @@
                                     &trans  &kp RS(SPACE) &trans        &trans  &kp LS(SPACE) &kp RALT
       >;
     };
+
+    
 // Ergo-l over Windows Azerty ----------------------------------------------------------------------------------
     // 6. Ergol over Windows azerty layer --
     //                                    -- 
@@ -228,9 +224,9 @@
             label = "1dk";
             display-name = "1dk";
             bindings = <
-  &circ FR_A   &kp FR_CCED    &a01xx K5 K6  &circ FR_O    &kp FR_DEG    &trans    &trans  &to EL_LAYER  &kp FR_MICR   &kp FR_UNDS    &kp FR_DIAE      &circ FR_U
-  &kp FR_AGRV  &kp FR_EACU    &kp FR_EGRV   &circ FR_E    &tild FR_N    &trans    &trans  &kp FR_LPRN   &kp FR_RPRN   &circ FR_I     &diae FR_I       &kp FR_UGRV
-  &a1xx K4 K5  &a02xx K2 K3   &a01xx K7 K3  &a01xx K5 K0  &a01xx K5 K1                    &a01xx K3 K3  &https        &to EL_LAYER   &a01xx K8 K3     &a01xx K6 K9
+  &circ FR_A   &kp FR_CCED    &a01xx K5 K6  &circ FR_O    &kp FR_DEG    &trans    &trans  &to EL_LAYER  &kp FR_MICR   &kp FR_UNDS    &kp FR_DIAE   &circ FR_U
+  &kp FR_AGRV  &kp FR_EACU    &kp FR_EGRV   &circ FR_E    &tild FR_N    &trans    &trans  &kp FR_LPRN   &kp FR_RPRN   &circ FR_I     &diae FR_I    &kp FR_UGRV
+  &a1xx K4 K5  &a02xx K2 K3   &a01xx K7 K3  &a01xx K5 K0  &a01xx K5 K1                    &a01xx K3 K3  &https        &to EL_LAYER   &a01xx K8 K3  &a01xx K6 K9
                                                   &sl EL_S1DK_LAYER     &trans    &trans  &trans        &a01xx K4 K6  &trans
             >;
         };

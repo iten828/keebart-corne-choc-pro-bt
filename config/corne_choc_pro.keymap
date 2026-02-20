@@ -95,7 +95,7 @@
 #include "lib/ergol-on-azerty/hold_taps_emul.dtsi" 
 
 
-4
+
 / {
     chosen { 
         zmk,physical-layout = &five_col_layout; 
@@ -185,7 +185,7 @@
       >;
     };
 
-    
+
 // Ergo-l over Windows Azerty ----------------------------------------------------------------------------------
     // 6. Ergol over Windows azerty layer --
     //                                    -- 

@@ -140,8 +140,7 @@
       bindings = <&sc EL_HRM_LAYER BACKSPACE>, <&lt EL_HRM_LAYER SPACE>;
       mods      = <MOD_LSFT>;
       keep-mods = <MOD_LSFT>;
-    };  
-
+    };
   };
 
   // XXX this whole AltGr section should probably be inside the `behaviors` branch

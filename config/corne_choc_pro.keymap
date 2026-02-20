@@ -210,7 +210,7 @@
     //                -- meilleure gestion du shift sur les couches sym et navnum. Je n’ai pas su faire autrement.
     //                -- Note: attention, est-ce que le fait de ne plus avoir accès au modifieur shift global
     //                -- ne risque pas de poser des problèmes en cas d’utilisation de shift dans un raccourci clavier ?
-    //                -- (je n’ai pas d’exemple en tête, mais cela pourrait être le cas…). Dans ce cas, ajouter shift en HRM serait une solution.
+    //                -- (le shift-enter est géré). Dans ce cas, ajouter shift en HRM serait une solution.
         sergol-layer {
             label = "Shift";
             display-name = "Shift";

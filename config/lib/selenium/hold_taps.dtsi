@@ -15,12 +15,13 @@
 #define VIM_NAV_LAYER   3
 #define NUM_NAV_LAYER   4
 #define NUM_ROW_LAYER   5
+#define GAME_LAYER      6
 
-#define FUNCTION_LAYER  17
-#define BT              18
+#define FUNCTION_LAYER  18
+#define BT              19
 // Potentially used by other keymaps deriving from this one, who may add extra layers.
 // Make sure this stays equal to <index_of_last_layer> + 1
-#define EXTRA_LAYERS_START_INDEX 17
+#define EXTRA_LAYERS_START_INDEX 20
 
 
 /**

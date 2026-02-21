@@ -109,9 +109,8 @@
     // 0. Base layer -- keep the QWERTY key codes to use your OS keyboard layout
     //               -- the Space Cadet layer-tap on the right can be replaced by an AltGr/Enter mod-tap
     //               -- adjust the homerow mods with the #define statements above
-        default_layer {
+    default_layer {
             display-name = "Qwerty";
-
             bindings = <
   &kp Q  &kp W  &kp E  &kp R  &kp T  &kp C_MUTE  &kp C_PP  &kp Y  &kp U  &kp I       &kp O    &kp P
   HRM_A  HRM_S  HRM_D  HRM_F  &kp G  &kp LALT    &kp RALT  &kp H  HRM_J  HRM_K       HRM_L    &kp SEMI
@@ -124,7 +123,7 @@
     // 1. NumLock layer -- NavNum layer that stays on until deactivated without holding key
     //                  -- 
     //                  -- 
-        num_lock_layer {
+    num_lock_layer {
             display-name = "NumLock";
             bindings = <
   &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans  &trans  &to BASE_LAYER S_N7  S_N8  S_N9  S_FSLH
@@ -184,10 +183,21 @@
                                     &trans  &kp RS(SPACE) &trans        &trans  &kp LS(SPACE) &kp RALT
       >;
     };
-
-
-// Ergo-l over Windows Azerty ----------------------------------------------------------------------------------
-    // 6. Ergol over Windows azerty layer --
+    // Gaming layer------------------------------------------------------------------------------------------------
+    // 6.Gaming layer -- TODO
+    //                -- 
+    //                -- 
+    gaming_layer {
+            display-name = "Gaming";
+            bindings = <
+  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp C_MUTE  &kp C_PP  &kp Y  &kp U  &kp I       &kp O    &kp P
+  &kp A  &kp S  &kp D  &kp F  &kp G  &kp LALT    &kp RALT  &kp H  &kp J  &kp K       &kp L    &kp SEMI
+  HRM_Z  &kp X  &kp C  &kp V  &kp B                        &kp N  &kp M  &kp COMMA   &kp DOT  &kp FSLH
+             &kp LALT  &kp SPACE RTHUMB_REACH    RTHUMB_REACH  RTHUMB_HOME RTHUMB_TUCK
+            >;
+        };
+    // Ergo-l over Windows Azerty ----------------------------------------------------------------------------------
+    // 7. Ergol over Windows azerty layer --
     //                                    -- 
         ergol-layer {
             label = "Ergo-l";
@@ -200,7 +210,7 @@
             >;
         };
 
-    // 7. Ergol Shift --
+    // 8. Ergol Shift --
     //                -- On shifte les touches 1 à 1 plutôt que d’utiliser le modifieur shift global. 
     //                -- Ça permet d’avoir une
     //                -- meilleure gestion du shift sur les couches sym et navnum. Je n’ai pas su faire autrement.
@@ -218,7 +228,7 @@
            >;
         };
  
-    // 8. Ergol 1DK layer --
+    // 9. Ergol 1DK layer --
     //                    --
         ergol_1dk_layer {
             label = "1dk";
@@ -231,7 +241,7 @@
             >;
         };
 
-    // 9. Ergol Shift 1DK --
+    // 10. Ergol Shift 1DK --
     //                 -- 
         sergol_1dk_layer {
             label = "s1dk";
@@ -244,7 +254,7 @@
             >;
         };
 
-    // 10. Ergol NumLock --
+    // 11. Ergol NumLock --
     //                   -- 
         ergol_num_lock_layer {
             display-name = "NumLock";
@@ -256,7 +266,7 @@
             >;
         };
 
-    // 11. Ergol SYM   --
+    // 12. Ergol SYM   --
     //                 -- 
         ergol_sym_layer {
             label = "sym";
@@ -269,7 +279,7 @@
             >;
         };
 
-    // 12. Ergol SSYM  -- 
+    // 13. Ergol SSYM  -- 
     //                 -- 
         sergol_sym_layer {
             label = "ssym";
@@ -282,7 +292,7 @@
             >;
         };
 
-    // 13. Ergol VimNav layer --
+    // 14. Ergol VimNav layer --
     //                        --
         ergol_vim_nav_layer {
              display-name = "VimNav";
@@ -294,7 +304,7 @@
       >;
     };
 
-    // 14. Ergol NumNav --
+    // 15. Ergol NumNav --
     //                  -- 
         ergol_numnav_layer {
             label = "ergol-NumNav";
@@ -307,7 +317,7 @@
             >;
         };
 
-    // 15. Ergol Shift NumNav -- 
+    // 16. Ergol Shift NumNav -- 
     //                        --
         sergol_numnav_layer {
             label = "snumnav";
@@ -320,7 +330,7 @@
             >;
         };
 
-    // 16. NumRow layer -- 
+    // 17. NumRow layer -- 
     //                  --  
     ergol_num_row_layer {
       display-name = "NumRow";
@@ -332,19 +342,19 @@
             >;
         };
 // Common layers -----------------------------------------------------------------------------------------------
-    // 17. Functions layer --
+    // 18. Functions layer --
     //                    -- 
         Functions {
             label = "Functions";
             display-name = "Functions";
             bindings = <
-  &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG                 &none  &none  &to EL_LAYER             &kp C_PREV  &kp C_VOL_UP      &kp C_BRI_UP         &kp SLCK 
-  &kp F5  &kp F6   &kp F7   &kp F8   &rgb_ug RGB_EFF                 &none  &none  &trans  &hrm LALT C_PP   &hrm RCTL C_MUTE  &hrm RGUI C_AL_LOCK  &hrm LSHIFT PSCRN
-  &kp F9  &kp F10  &kp F11  &kp F12  &rgb_ug RGB_COLOR_HSB(0,92,49)                &to BASE_LAYER           &kp C_NEXT  &kp C_VOL_DN      &kp C_BRI_DN         &kp INS
+  &kp F1  &kp F2   &kp F3   &kp F4   &rgb_ug RGB_TOG  &none  &none  &to EL_LAYER    &kp C_PREV      &kp C_VOL_UP      &kp C_BRI_UP         &kp SLCK 
+  &kp F5  &kp F6   &kp F7   &kp F8   &rgb_ug RGB_EFF  &none  &none  &trans          &hrm LALT C_PP  &hrm RCTL C_MUTE  &hrm RGUI C_AL_LOCK  &hrm LSHIFT PSCRN
+  &kp F9  &kp F10  &kp F11  &kp F12  &to GAME_LAYER                 &to BASE_LAYER  &kp C_NEXT      &kp C_VOL_DN      &kp C_BRI_DN         &kp INS
                    &mo BT   &trans   &trans                                        &trans  &trans &trans
             >;
         };
-    // 18. BlueTooth layer -- 
+    // 19. BlueTooth layer -- 
     //                    -- 
         BT {
             display-name = "BT";

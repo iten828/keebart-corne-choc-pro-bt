@@ -2,17 +2,17 @@
 #include <dt-bindings/zmk/keys.h>
 
 // clang-format off
-#define EL_LAYER           6
-#define EL_SLAYER          7
-#define EL_1DK_LAYER       8
-#define EL_S1DK_LAYER      9
-#define EL_NUM_LOCK_LAYER 10
-#define EL_SYMBOLS_LAYER  11
-#define EL_SSYMBOLS_LAYER 12
-#define EL_VIM_NAV_LAYER  13
-#define EL_NUM_NAV_LAYER  14
-#define EL_SNUM_NAV_LAYER 15
-#define EL_NUM_ROW_LAYER  16
+#define EL_LAYER           7
+#define EL_SLAYER          8
+#define EL_1DK_LAYER       9
+#define EL_S1DK_LAYER     10
+#define EL_NUM_LOCK_LAYER 11
+#define EL_SYMBOLS_LAYER  12
+#define EL_SSYMBOLS_LAYER 13
+#define EL_VIM_NAV_LAYER  14
+#define EL_NUM_NAV_LAYER  15
+#define EL_SNUM_NAV_LAYER 16
+#define EL_NUM_ROW_LAYER  17
 /**
  * Home Rew
  */
@@ -25,6 +25,9 @@
   #define HRM_R &hrm LALT R
   #define HRM_T &hrm RCTL T
   #define HRM_I &hrm RGUI I
+  #define HRM_Z &hrm LSHIFT Z 
+  //test for gaming laye
+  #define HRM_Z &hrm LSHIFT Z
 #else
 //  #define HRM_S &kp S
   #define HRM_E &kp E

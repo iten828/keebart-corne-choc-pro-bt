@@ -26,8 +26,9 @@
   #define HRM_T &hrm RCTL T
   #define HRM_I &hrm RGUI I
   #define HRM_Z &hrm LSHIFT Z 
-  //test for gaming laye
-  #define HRM_Z &hrm LSHIFT Z
+  //test for gaming layer --TODO
+  #define HRM_GA &hrm LSHIFT A
+  #define HRM_GZ &hrm LCTL   Z
 #else
 //  #define HRM_S &kp S
   #define HRM_E &kp E

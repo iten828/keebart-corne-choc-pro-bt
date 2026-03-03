@@ -263,7 +263,7 @@
   &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans  &trans  &to EL_LAYER  &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
   S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans  &trans  &kp FR_MINS   &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
   S_MONEY  S_COLON  S_STAR   S_PLUS    S_PRCNT                    &kp FR_COMM   &kp FR_1   &kp FR_2  &kp FR_3  &kp FR_DOT
-  &sl EL_SNUM_NAV_LAYER  &sc EL_NUM_NAV_LAYER BACKSPACE  &kp (TAB)  &trans  &lt EL_NUM_NAV_LAYER  &insec  &EZ_SL(EL_SYMBOLS_LAYER)
+  &sl EL_SNUM_NAV_LAYER  &sc EL_NUM_NAV_LAYER BACKSPACE  &kp (TAB)  &trans  &lt EL_NUM_NAV_LAYER LS(SPACE)  &EZ_SL(EL_SYMBOLS_LAYER)
             >;
         };
 
@@ -314,7 +314,7 @@
   &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP  &trans            &trans  &to EL_NUM_LOCK_LAYER  &kp FR_7   &kp FR_8  &kp FR_9  &kp FR_SLSH
   X_ALL    &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &trans            &trans  &kp FR_MINS            &kp FR_4   &kp FR_5  &kp FR_6  &kp FR_0
   X_UNDO   X_CUT    X_COPY   X_PASTE   X_REDO                               &kp FR_COMM            &kp FR_1   &kp FR_2  &kp FR_3  &kp FR_DOT
-  &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE &lt FUNCTION_LAYER   &insec  &EZ_LSK(RALT) // ajouter un modtap capslock/snumnav pour pouvoir faire shift depuis la NumNav ?
+  &kp CAPSLOCK  &sc FUNCTION_LAYER DEL  &kp LS(TAB)  &kp ESCAPE   &lt FUNCTION_LAYER LS(SPACE)  &EZ_LSK(RALT) // ajouter un modtap capslock/snumnav pour pouvoir faire shift depuis la NumNav ?
             >;
         };
 
@@ -339,7 +339,7 @@
   &kp FR_EXLM  &kp FR_AT  &kp FR_HASH  &kp FR_DLR  &kp FR_PERC  &trans    &trans  &a0xx K9 K4  &kp FR_AMPR  &kp FR_ASTR  &kp FR_LPRN  &kp FR_RPRN 
   &kp FR_1     &kp FR_2   &kp FR_3     &kp FR_4    &kp FR_5     &trans    &trans  &kp FR_6     &kp FR_7     &kp FR_8    &kp FR_9     &kp FR_0
   &none        &none      &none        &none       &none                          &kp FR_MINS  &kp FR_COMM  &kp FR_DOT  &kp FR_COLN  &kp FR_SLSH
-                                       &trans      &insec       &trans    &trans  &insec &kp   RALT
+                                       &trans      RS(SPACE)       &trans    &trans  LS(SPACE)    &kp RALT
             >;
         };
 // Common layers -----------------------------------------------------------------------------------------------
